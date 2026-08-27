@@ -3,46 +3,38 @@ class SiteHeader extends HTMLElement {
     this.innerHTML = `
       <header class="header">
         <div class="header__container">
-          <a href="/" class="header__brand">
+        
+          <!-- Logotipo / Link para Home -->
+          <a href="/" class="header__brand" aria-label="TechPro - Página Inicial">
             <img
-              src="./assets/images/common/techpro-logo.png"
+              src="/assets/images/common/techpro-logo.png"
               alt="Logotipo da TechPro"
               class="header__logo"
             />
           </a>
 
+          <!-- Menu de navegação principal -->
           <nav class="header__nav" aria-label="Navegação principal">
             <ul class="header__list">
               <li class="header__item">
                 <a class="header__link" href="/">Home</a>
               </li>
-
               <li class="header__item">
-                <a class="header__link" href="/pages/services.html">
-                  Serviços
-                </a>
+                <a class="header__link" href="/pages/services.html">Serviços</a>
               </li>
-
               <li class="header__item">
-                <a class="header__link" href="/pages/customers.html">
-                  Clientes
-                </a>
+                <a class="header__link" href="/pages/customers.html">Clientes</a>
               </li>
-
               <li class="header__item">
-                <a class="header__link" href="/pages/institutional.html">
-                  Institucional
-                </a>
+                <a class="header__link" href="/pages/institutional.html">Institucional</a>
               </li>
-
               <li class="header__item">
-                <a class="header__link" href="/pages/contact.html">
-                  Contato
-                </a>
+                <a class="header__link" href="/pages/contact.html">Contato</a>
               </li>
             </ul>
           </nav>
 
+          <!-- Botão de ação -->
           <a class="header__button" href="/pages/contact.html">
             Solicitar orçamento
           </a>

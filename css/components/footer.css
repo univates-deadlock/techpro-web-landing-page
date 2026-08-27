@@ -1,0 +1,117 @@
+.footer {
+  width: 100%;
+  background-color: var(--color-background-footer);
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 var(--page-padding);
+}
+
+/* Newsletter */
+
+.footer__form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+
+  gap: 16px;
+  padding: 24px 20px;
+}
+
+.footer__email-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-sm);
+}
+
+.footer__inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer__inputs-text {
+  margin: 0;
+  color: var(--color-emphasis-text);
+  font-size: var(--font-size-xl);
+  line-height: 1.2;
+}
+
+.footer__inputs-button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.footer__input {
+  width: 575px;
+  height: 32px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0 10px;
+  font-size: var(--font-size-md);
+  line-height: 32px;
+}
+
+.footer__input::placeholder {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-md);
+}
+
+.footer__button {
+  height: 32px;
+  width: 256px;
+  box-sizing: border-box;
+  font-size: var(--font-size-md);
+  padding: 0 20px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-button-footer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Informações */
+.footer__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 40px;
+  padding: 30px 40px;
+}
+
+.footer__info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer__info-section-text {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+}
+
+.footer__info-section-subtitle {
+  margin: 0 0 4px;
+  color: var(--color-emphasis-text);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+}
