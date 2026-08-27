@@ -5,7 +5,7 @@ class SiteHeader extends HTMLElement {
         <div class="header__container">
           <a href="/" class="header__brand">
             <img
-              src="./assets/images/logo/techpro-logo.png"
+              src="./assets/images/common/techpro-logo.png"
               alt="Logotipo da TechPro"
               class="header__logo"
             />
