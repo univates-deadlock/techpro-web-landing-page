@@ -4,7 +4,7 @@ class SiteFooter extends HTMLElement {
       <footer class="footer">
         <div class="footer__container">
 
-          <!-- Formulário de Newsletter -->
+          <!-- Newsletter Form -->
           <form class="footer__form" id="newsletter-form">
             <div class="footer__email-wrapper">
               <img
@@ -14,8 +14,8 @@ class SiteFooter extends HTMLElement {
               />
             </div>
 
-            <nav class="footer__inputs-wrapper">
-              <span class="footer__inputs-text">Receba nossas ofertas e novidades!</span>
+            <div class="footer__inputs-wrapper">
+              <h2 class="footer__inputs-text">Receba nossas ofertas e novidades!</h2>
               <div class="footer__inputs-button">
                 <input
                   class="footer__input"
@@ -38,13 +38,13 @@ class SiteFooter extends HTMLElement {
                   Cadastrar
                 </button>
               </div>
-            </nav>
+            </div>
           </form>
 
-          <!-- Seções de Informações e Navegação -->
+          <!-- Info Sections & Navigation -->
           <div class="footer__info">
 
-            <!-- Links Institucionais -->
+            <!-- Institutional Links -->
             <nav class="footer__info-section">
               <h3 class="footer__info-section-subtitle">Institucional</h3>
               <a class="footer__info-section-text" href="/pages/not_implemented.html">Sobre a TechPro</a>
@@ -52,7 +52,7 @@ class SiteFooter extends HTMLElement {
               <a class="footer__info-section-text" href="/pages/not_implemented.html">História</a>
             </nav>
 
-            <!-- Atendimento e Horários -->
+            <!-- Customer Service & Hours -->
             <div class="footer__info-section">
               <h3 class="footer__info-section-subtitle">Atendimento</h3>
               <span class="footer__info-section-text">Email</span>
@@ -68,7 +68,7 @@ class SiteFooter extends HTMLElement {
               <span class="footer__info-section-text">Sábado das 08:30 as 12:00</span>
             </div>
 
-            <!-- Políticas de Uso -->
+            <!-- Usage Policies -->
             <nav class="footer__info-section">
               <h3 class="footer__info-section-subtitle">Políticas de uso</h3>
               <a class="footer__info-section-text" href="/pages/not_implemented.html">Termos de uso</a>
@@ -77,7 +77,7 @@ class SiteFooter extends HTMLElement {
               <a class="footer__info-section-text" href="/pages/not_implemented.html">Políticas de pagamento</a>
             </nav>
 
-            <!-- Redes Sociais e Contatos -->
+            <!-- Social Media & Contact Channels -->
             <nav class="footer__info-section">
               <h3 class="footer__info-section-subtitle">Canais de comunicação</h3>
               <a
