@@ -1,26 +1,34 @@
 :root {
-  /* Colors */
+  /* ==========================================================================
+     Colors
+     ========================================================================== */
+  /* Primary Colors (Green) */
   --color-primary: rgba(45, 184, 132, 1);
   --color-primary-light: rgba(27, 227, 152, 1);
 
+  /* Buttons & Accents (Blue) */
   --color-button-footer: #0f8bff;
   --color-button-secondary: #23c3f3;
   --color-buton-secondary-light: #0098c5;
 
-  --color-hero-text: white;
+  /* Text Colors */
+  --color-emphasis-text: #ffffff;
+  --color-hero-text: #ffffff;
   --color-text-muted: #969696;
 
+  /* Background Colors */
   --color-background: #ffffff;
   --color-background-secondary: #edf2f8;
   --color-background-footer: #0a1429;
   --color-background-hero: #0e1930;
   --color-background-hero-light: #00325f;
 
+  /* Borders */
   --color-border: #d9d9d9;
 
-  --color-emphasis-text: #fff;
-
-  /* Gradient */
+  /* ==========================================================================
+     Gradients
+     ========================================================================== */
   --primary-gradient: linear-gradient(
     90deg,
     var(--color-primary) 0%,
@@ -33,21 +41,27 @@
     var(--color-buton-secondary-light) 100%
   );
 
-  /* Typography */
+  /* ==========================================================================
+     Typography
+     ========================================================================== */
   --font-family-primary: "Rubik", sans-serif;
 
+  /* Font Sizes */
   --font-size-sm: 14px;
   --font-size-md: 16px;
   --font-size-lg: 20px;
   --font-size-xl: 32px;
   --font-size-2xl: 48px;
 
+  /* Font Weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  /* Spacing */
+  /* ==========================================================================
+     Spacing
+     ========================================================================== */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -56,10 +70,16 @@
   --spacing-2xl: 48px;
   --spacing-3xl: 64px;
 
-  /* Layout */
-  --page-padding: 120px;
+  /* ==========================================================================
+     Layout & Page Padding
+     ========================================================================== */
+  --page-padding-lg: 120px;
+  --page-padding-md: 60px;
+  --page-padding-sm: 20px;
 
-  /* Border radius */
+  /* ==========================================================================
+     Border Radius
+     ========================================================================== */
   --radius-sm: 8px;
   --radius-md: 11px;
 }
