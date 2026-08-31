@@ -1,0 +1,184 @@
+/* ==========================================================================
+   Contact Page Styles
+   ========================================================================== */
+
+.hero__container,
+.principal,
+.form__container,
+.location {
+  padding: 0 var(--page-padding-lg);
+}
+
+.principal,
+.form,
+.location {
+  padding: 50px 0;
+}
+
+.principal {
+  padding: 50px var(--page-padding-lg);
+}
+
+.location {
+  padding: 50px var(--page-padding-lg);
+}
+
+.form__subtitle,
+.location__subtitle {
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  background: url("/assets/images/contact/hero.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+
+.principal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.principal__subcontainer {
+  padding: 10px 20px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  background-color: var(--color-background);
+}
+
+.principal__whatsapp {
+  background: var(--primary-gradient);
+  color: var(--color-emphasis-text);
+}
+
+.green_title {
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+.form {
+  background-color: var(--color-background-secondary);
+}
+
+.form__container {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  gap: 50px;
+}
+
+.form__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form__message {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-light);
+}
+
+.form__button-whatsapp {
+  color: var(--color-emphasis-text);
+  background-color: black;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  max-width: 370px;
+  text-align: center;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.form__form {
+  background-color: white;
+  border-radius: var(--radius-xl);
+  padding: 25px 40px;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 5px;
+}
+
+.location__title {
+  margin: 0;
+  padding: 0;
+}
+
+.location__iframe-container {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.location__iframe {
+  width: 100%;
+  border-radius: var(--radius-3xl);
+}
+
+/* ==========================================================================
+   Responsiveness
+   ========================================================================== */
+@media (max-width: 890px) {
+  .hero__container,
+  .principal,
+  .form__container,
+  .location {
+    padding: 0 var(--page-padding-md);
+  }
+
+  .principal,
+  .location {
+    padding: 40px var(--page-padding-md);
+  }
+
+  .form {
+    padding: 40px 0;
+  }
+
+  .principal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero__container,
+  .principal,
+  .form__container,
+  .location {
+    padding: 0 var(--page-padding-sm);
+  }
+
+  .principal,
+  .location {
+    padding: 30px var(--page-padding-sm);
+  }
+
+  .form {
+    padding: 30px 0;
+  }
+
+  .principal {
+    grid-template-columns: 1fr;
+  }
+
+  .form__subtitle,
+  .location__subtitle {
+    font-size: var(--font-size-4xl);
+  }
+}
