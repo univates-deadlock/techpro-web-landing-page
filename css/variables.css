@@ -1,30 +1,71 @@
 :root {
   /* ==========================================================================
-     Colors
+     Color Palette
      ========================================================================== */
-  /* Primary Colors (Green) */
-  --color-primary: rgba(45, 184, 132, 1);
-  --color-primary-light: rgba(27, 227, 152, 1);
+  /* Primary Green Shades */
+  --color-green-400: #1be398;
+  --color-green-500: #2db884;
+  --color-green-600: #23956a;
 
-  /* Buttons & Accents (Blue) */
-  --color-button-footer: #0f8bff;
-  --color-button-secondary: #23c3f3;
-  --color-buton-secondary-light: #0098c5;
+  /* Accent Blue Shades */
+  --color-blue-400: #23c3f3;
+  --color-blue-500: #0f8bff;
+  --color-blue-600: #0098c5;
+  --color-blue-900: #00325f;
+
+  /* Dark / Navy Shades */
+  --color-navy-800: #162444;
+  --color-navy-900: #0e1930;
+  --color-navy-950: #0a1429;
+
+  /* Neutral & Grays */
+  --color-neutral-white: #ffffff;
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #edf2f8;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #d9d9d9;
+  --color-neutral-400: #b0b0b0;
+  --color-neutral-500: #969696;
+  --color-neutral-700: #4a5568;
+  --color-neutral-800: #2d3748;
+  --color-neutral-900: #1a202c;
+
+  /* Brand / Action Colors */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1da851;
+
+  /* ==========================================================================
+     Semantic Colors
+     ========================================================================== */
+  --color-primary: var(--color-green-500);
+  --color-primary-light: var(--color-green-400);
+  --color-primary-dark: var(--color-green-600);
+
+  /* Buttons & Accents */
+  --color-button-footer: var(--color-blue-500);
+  --color-button-secondary: var(--color-blue-400);
+  --color-button-secondary-light: var(--color-blue-600);
+  --color-buton-secondary-light: var(
+    --color-blue-600
+  ); /* Alias for backward compatibility */
 
   /* Text Colors */
-  --color-emphasis-text: #ffffff;
-  --color-hero-text: #ffffff;
-  --color-text-muted: #969696;
+  --color-text-main: var(--color-neutral-900);
+  --color-text-body: var(--color-neutral-700);
+  --color-text-muted: var(--color-neutral-500);
+  --color-emphasis-text: var(--color-neutral-white);
+  --color-hero-text: var(--color-neutral-white);
 
   /* Background Colors */
-  --color-background: #ffffff;
-  --color-background-secondary: #edf2f8;
-  --color-background-footer: #0a1429;
-  --color-background-hero: #0e1930;
-  --color-background-hero-light: #00325f;
+  --color-background: var(--color-neutral-white);
+  --color-background-secondary: var(--color-neutral-100);
+  --color-background-footer: var(--color-navy-950);
+  --color-background-hero: var(--color-navy-900);
+  --color-background-hero-light: var(--color-blue-900);
 
-  /* Borders */
-  --color-border: #d9d9d9;
+  /* Borders & Dividers */
+  --color-border: var(--color-neutral-300);
+  --color-border-light: var(--color-neutral-200);
 
   /* ==========================================================================
      Gradients
@@ -35,51 +76,112 @@
     var(--color-primary-light) 100%
   );
 
-  --secondary-gradient: linear-gradient(
+  --hero-gradient: linear-gradient(
     90deg,
-    var(--color-button-secondary) 0%,
-    var(--color-buton-secondary-light) 100%
+    color-mix(in srgb, var(--color-navy-950) 90%, transparent) 0%,
+    color-mix(in srgb, var(--color-blue-900) 80%, transparent) 100%
   );
 
   /* ==========================================================================
-     Typography
+     Typography (Modular Scale with rem)
      ========================================================================== */
-  --font-family-primary: "Rubik", sans-serif;
+  --font-family-primary:
+    "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Font Sizes */
-  --font-size-sm: 14px;
-  --font-size-md: 16px;
-  --font-size-lg: 20px;
-  --font-size-xl: 32px;
-  --font-size-2xl: 48px;
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-md: 1rem; /* 16px (Base) */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.75rem; /* 28px */
+  --font-size-4xl: 2rem; /* 32px */
+  --font-size-5xl: 3rem; /* 48px */
+  --font-size-6xl: 4rem; /* 64px */
+  --font-size-7xl: 4.75rem; /* 76px */
 
   /* Font Weights */
+  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
+  /* Line Heights */
+  --line-height-none: 1;
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+
+  /* Letter Spacing */
+  --letter-spacing-medium: 0.1em;
+  --letter-spacing-wide: 0.15em;
+
   /* ==========================================================================
-     Spacing
+     Spacing (Grid de 4px / 8px)
      ========================================================================== */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-2xl: 48px;
-  --spacing-3xl: 64px;
+  --spacing-2xs: 0.25rem; /* 4px */
+  --spacing-xs: 0.5rem; /* 8px */
+  --spacing-sm: 0.75rem; /* 12px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 3rem; /* 48px */
+  --spacing-3xl: 4rem; /* 64px */
+  --spacing-4xl: 5rem; /* 80px */
+  --spacing-5xl: 6rem; /* 96px */
 
   /* ==========================================================================
      Layout & Page Padding
      ========================================================================== */
+  --container-max-width: 1440px;
   --page-padding-lg: 120px;
-  --page-padding-md: 60px;
+  --page-padding-md: 40px;
   --page-padding-sm: 20px;
 
   /* ==========================================================================
      Border Radius
      ========================================================================== */
+  --radius-xs: 4px;
   --radius-sm: 8px;
-  --radius-md: 11px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-3xl: 48px;
+  --radius-full: 9999px;
+
+  /* ==========================================================================
+     Shadows
+     ========================================================================== */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+  /* ==========================================================================
+     Transitions
+     ========================================================================== */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ==========================================================================
+     Z-Index Scale
+     ========================================================================== */
+  --z-base: 1;
+  --z-sticky: 100;
+  --z-dropdown: 500;
+  --z-drawer: 1000;
+  --z-modal: 2000;
+  --z-popover: 3000;
 }
