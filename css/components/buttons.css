@@ -1,0 +1,118 @@
+/* ==========================================================================
+   Button Component (Design System)
+   ========================================================================== */
+
+/* Base Button Structure */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  white-space: nowrap;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast),
+    filter var(--transition-fast);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ==========================================================================
+   Color Variants
+   ========================================================================== */
+
+/* Primary Button (Brand Green Gradient) */
+.btn--primary {
+  background: var(--primary-gradient);
+  color: var(--color-emphasis-text);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--color-primary) 35%, transparent);
+}
+
+.btn--primary:hover {
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--color-primary) 50%, transparent);
+  filter: brightness(1.06);
+}
+
+.btn--primary:active {
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+/* Secondary Button (Brand Blue) */
+.btn--secondary {
+  background-color: var(--color-button-footer);
+  color: var(--color-emphasis-text);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--color-button-footer) 35%, transparent);
+}
+
+.btn--secondary:hover {
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--color-button-footer) 50%, transparent);
+  filter: brightness(1.1);
+}
+
+.btn--secondary:active {
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-button-footer) 25%, transparent);
+}
+
+/* Dark / Tertiary Button (Neutral Dark / WhatsApp CTA) */
+.btn--dark,
+.btn--tertiary {
+  background-color: var(--color-text-main);
+  color: var(--color-emphasis-text);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--dark:hover,
+.btn--tertiary:hover {
+  background-color: var(--color-whatsapp-dark);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+}
+
+.btn--dark:active,
+.btn--tertiary:active {
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================================
+   Size & Layout Modifiers
+   ========================================================================== */
+.btn--full {
+  width: 100%;
+}
+
+.btn--sm {
+  padding: 6px 14px;
+  font-size: var(--font-size-sm);
+}
+
+.btn--lg {
+  padding: 14px 28px;
+  font-size: var(--font-size-lg);
+}
+
+/* Button Icon */
+.btn__icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: transform var(--transition-normal);
+}
+
+.btn:hover .btn__icon {
+  transform: translate(3px, -3px) scale(1.1);
+}
