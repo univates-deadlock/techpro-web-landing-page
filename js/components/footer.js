@@ -32,7 +32,7 @@ class SiteFooter extends HTMLElement {
                   required
                 />
                 <button
-                  class="footer__button"
+                  class="footer__button btn btn--secondary"
                   type="submit"
                 >
                   Cadastrar
