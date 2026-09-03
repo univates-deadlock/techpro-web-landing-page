@@ -13,8 +13,12 @@
     <script type="module" src="/js/main.js"></script>
   </head>
   <body>
+    <!-- Global Site Header Web Component -->
     <site-header></site-header>
 
+    <!-- ====================================================================
+         Hero Section
+         ==================================================================== -->
     <section class="hero">
       <div class="hero__container">
         <h1 class="hero__title green_title">Contato</h1>
@@ -26,7 +30,11 @@
       </div>
     </section>
 
+    <!-- ====================================================================
+         Direct Contact Channels Grid (Main Content)
+         ==================================================================== -->
     <main class="principal container">
+      <!-- WhatsApp Direct Channel (Highlighted with Brand Gradient) -->
       <div class="principal__whatsapp principal__subcontainer">
         <img
           src="/assets/icons/white-sms.svg"
@@ -37,6 +45,8 @@
         <span class="principal__whatsapp-subtitle">(51) 99394-8340</span>
         <span class="principal__whatsapp-message">Resposta imediata</span>
       </div>
+
+      <!-- Phone Channel -->
       <div class="principal__subcontainer-other principal__subcontainer">
         <img
           src="/assets/icons/green-phone.svg"
@@ -49,6 +59,8 @@
           >Seg-Sex . 08:15 às 18:00</span
         >
       </div>
+
+      <!-- Email Channel -->
       <div class="principal__subcontainer-other principal__subcontainer">
         <img
           src="/assets/icons/green-mail.svg"
@@ -63,6 +75,8 @@
           >Resposta em até 24h.</span
         >
       </div>
+
+      <!-- Physical Office Address -->
       <div class="principal__subcontainer-other principal__subcontainer">
         <img
           src="/assets/icons/green-location-pin.svg"
@@ -79,8 +93,12 @@
       </div>
     </main>
 
+    <!-- ====================================================================
+         Budget Request & Contact Form Section
+         ==================================================================== -->
     <section class="form">
       <div class="form__container">
+        <!-- Form Introduction & WhatsApp CTA -->
         <div class="form__text-container">
           <h2 class="form__title green_title">Formulário</h2>
           <h3 class="form__subtitle">Conte-nos sobre seu projeto</h3>
@@ -95,7 +113,10 @@
             >Chamar no WhatsApp</a
           >
         </div>
+
+        <!-- Interactive Budget Request Form -->
         <form class="form__form">
+          <!-- Name & Phone Row -->
           <div class="form__name-phone-container">
             <label for="name" class="form__name-label">Nome completo</label>
             <input
@@ -118,6 +139,7 @@
             />
           </div>
 
+          <!-- Email Field -->
           <label for="email" class="form__email-label">E-mail</label>
           <input
             type="email"
@@ -127,6 +149,7 @@
             class="form__email-input"
           />
 
+          <!-- Customer Type Field -->
           <label for="customer_type" class="form__customer-type-label"
             >Tipo de cliente</label
           >
@@ -139,6 +162,7 @@
             class="form__customer-type-input"
           />
 
+          <!-- Project Description / Observations Field -->
           <label for="obs" class="form__obs-label"
             >Mensagem / Descrição de necessidade</label
           >
@@ -147,6 +171,9 @@
       </div>
     </section>
 
+    <!-- ====================================================================
+         Office Location & Embedded Map Section
+         ==================================================================== -->
     <section class="location">
       <h2 class="location__title green_title">Localização</h2>
       <h3 class="location__subtitle">Onde estamos</h3>
@@ -164,6 +191,7 @@
       </div>
     </section>
 
+    <!-- Global Site Footer Web Component -->
     <site-footer></site-footer>
   </body>
 </html>

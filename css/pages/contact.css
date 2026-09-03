@@ -2,6 +2,10 @@
    Contact Page Styles
    ========================================================================== */
 
+/* ==========================================================================
+   1. Shared Layout & Section Spacing
+   ========================================================================== */
+/* Horizontal container padding on large screens */
 .hero__container,
 .principal,
 .form__container,
@@ -9,6 +13,7 @@
   padding: 0 var(--page-padding-lg);
 }
 
+/* Vertical spacing between primary page sections */
 .principal,
 .form,
 .location {
@@ -23,6 +28,7 @@
   padding: 50px var(--page-padding-lg);
 }
 
+/* Section Subtitles */
 .form__subtitle,
 .location__subtitle {
   font-size: var(--font-size-6xl);
@@ -31,31 +37,7 @@
   padding: 0;
 }
 
-.hero {
-  background: url("/assets/images/contact/hero.png") no-repeat center center;
-  background-size: cover;
-  width: 100%;
-  height: 500px;
-}
-
-.principal {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.principal__subcontainer {
-  padding: 10px 20px;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-sm);
-  background-color: var(--color-background);
-}
-
-.principal__whatsapp {
-  background: var(--primary-gradient);
-  color: var(--color-emphasis-text);
-}
-
+/* Section Tag / Badge Title */
 .green_title {
   text-transform: uppercase;
   color: var(--color-primary);
@@ -64,28 +46,71 @@
   letter-spacing: var(--letter-spacing-wide);
 }
 
+/* ==========================================================================
+   2. Hero Section
+   ========================================================================== */
+/* Hero banner with full-bleed background cover image */
+.hero {
+  background: url("/assets/images/contact/hero.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+
+/* ==========================================================================
+   3. Contact Cards Grid (Channels)
+   ========================================================================== */
+/* 4-column direct contact channels grid */
+.principal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Individual contact channel card */
+.principal__subcontainer {
+  padding: 10px 20px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  background-color: var(--color-background);
+}
+
+/* Highlighted WhatsApp channel with primary brand gradient */
+.principal__whatsapp {
+  background: var(--primary-gradient);
+  color: var(--color-emphasis-text);
+}
+
+/* ==========================================================================
+   4. Budget Request & Contact Form Section
+   ========================================================================== */
+/* Light gray background section container */
 .form {
   background-color: var(--color-background-secondary);
 }
 
+/* Two-column layout: CTA text on left (3fr), Form card on right (4fr) */
 .form__container {
   display: grid;
   grid-template-columns: 3fr 4fr;
   gap: 50px;
 }
 
+/* Left Column: Call-to-action text and buttons wrapper */
 .form__text-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+/* Introductory supporting copy */
 .form__message {
   color: var(--color-text-muted);
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-light);
 }
 
+/* WhatsApp direct trigger button */
 .form__button-whatsapp {
   color: var(--color-emphasis-text);
   background-color: black;
@@ -97,12 +122,17 @@
   font-weight: var(--font-weight-bold);
 }
 
+/* Right Column: White elevated form card */
 .form__form {
   background-color: white;
   border-radius: var(--radius-xl);
   padding: 25px 40px;
 }
 
+/* ==========================================================================
+   5. Office Location & Map Section
+   ========================================================================== */
+/* Centered location section header & container */
 .location {
   display: flex;
   flex-direction: column;
@@ -117,20 +147,24 @@
   padding: 0;
 }
 
+/* Iframe map wrapper */
 .location__iframe-container {
   width: 100%;
   padding: 0 10px;
 }
 
+/* Rounded embedded Google Map iframe */
 .location__iframe {
   width: 100%;
   border-radius: var(--radius-3xl);
 }
 
 /* ==========================================================================
-   Responsiveness
+   6. Responsiveness
    ========================================================================== */
+/* Tablets & Medium Screens (<= 890px) */
 @media (max-width: 890px) {
+  /* Reduce horizontal margins */
   .hero__container,
   .principal,
   .form__container,
@@ -147,16 +181,20 @@
     padding: 40px 0;
   }
 
+  /* Transition contact channels grid to 2 columns */
   .principal {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Stack form CTA text and form inputs into a single column */
   .form__container {
     grid-template-columns: 1fr;
   }
 }
 
+/* Mobile Devices & Small Screens (<= 600px) */
 @media (max-width: 600px) {
+  /* Compact horizontal padding for mobile */
   .hero__container,
   .principal,
   .form__container,
@@ -173,10 +211,12 @@
     padding: 30px 0;
   }
 
+  /* Single column contact cards on mobile */
   .principal {
     grid-template-columns: 1fr;
   }
 
+  /* Scale down large subtitles on mobile */
   .form__subtitle,
   .location__subtitle {
     font-size: var(--font-size-4xl);
