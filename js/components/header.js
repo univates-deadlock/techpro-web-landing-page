@@ -46,7 +46,7 @@ class SiteHeader extends HTMLElement {
               </ul>
 
               <!-- Call to Action Button -->
-              <a class="header__button" href="/pages/contact.html">
+              <a class="header__button btn btn--primary" href="/pages/contact.html">
                 Solicitar orçamento
               </a>
             </nav>

@@ -57,11 +57,16 @@ site-header {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-main);
-  transition: color var(--transition-fast);
+  position: relative;
+  display: inline-block;
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .header__link:hover {
   color: var(--color-primary);
+  transform: translateY(-1px);
 }
 
 /* Action Button ("Solicitar orçamento") */
@@ -69,26 +74,8 @@ site-header {
   justify-self: end;
   width: 196px;
   height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
   border-radius: var(--radius-md);
-  color: var(--color-emphasis-text);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  background: var(--primary-gradient);
-  box-shadow: var(--shadow-sm);
-  transition: opacity var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.header__button:hover {
-  opacity: 0.92;
-  box-shadow: var(--shadow-md);
-}
-
-.header__button:active {
-  transform: scale(0.98);
 }
 
 /* Close Button inside Sidebar (Hidden on Desktop) */
@@ -98,6 +85,17 @@ site-header {
   background-color: transparent;
   cursor: pointer;
   padding: var(--spacing-2xs);
+  transition:
+    transform var(--transition-normal),
+    opacity var(--transition-fast);
+}
+
+.header__close-btn:hover {
+  transform: rotate(90deg) scale(1.1);
+}
+
+.header__close-btn:active {
+  transform: rotate(90deg) scale(0.95);
 }
 
 /* Hamburger Button (Hidden on Desktop) */
@@ -107,6 +105,17 @@ site-header {
   background-color: transparent;
   cursor: pointer;
   padding: var(--spacing-2xs);
+  transition:
+    transform var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+.header__hamburguer:hover {
+  transform: scale(1.12);
+}
+
+.header__hamburguer:active {
+  transform: scale(0.95);
 }
 
 /* ==========================================================================
