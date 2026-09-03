@@ -3,38 +3,15 @@
    ========================================================================== */
 
 /* ==========================================================================
-   1. Shared Layout & Section Spacing
+   Shared Layout & Section Spacing
    ========================================================================== */
-/* Horizontal container padding on large screens */
-.hero__container,
-.principal,
-.form__container,
-.location {
-  padding: 0 var(--page-padding-lg);
-}
-
-/* Vertical spacing between primary page sections */
-.principal,
+/* Padding and width on large screens */
+.location,
+.hero,
 .form,
-.location {
-  padding: 50px 0;
-}
-
 .principal {
   padding: 50px var(--page-padding-lg);
-}
-
-.location {
-  padding: 50px var(--page-padding-lg);
-}
-
-/* Section Subtitles */
-.form__subtitle,
-.location__subtitle {
-  font-size: var(--font-size-6xl);
-  font-weight: var(--font-weight-semibold);
-  margin: 0;
-  padding: 0;
+  width: 100%;
 }
 
 /* Section Tag / Badge Title */
@@ -46,33 +23,93 @@
   letter-spacing: var(--letter-spacing-wide);
 }
 
-/* ==========================================================================
-   2. Hero Section
-   ========================================================================== */
-/* Hero banner with full-bleed background cover image */
-.hero {
-  background: url("/assets/images/contact/hero.png") no-repeat center center;
-  background-size: cover;
-  width: 100%;
-  height: 500px;
+/* Section Subtitles */
+.form__subtitle,
+.location__subtitle {
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin: 0;
+  padding: 0;
 }
 
 /* ==========================================================================
-   3. Contact Cards Grid (Channels)
+   Hero Section
+   ========================================================================== */
+/* Hero banner with full-bleed background cover image */
+.hero {
+  position: relative;
+  background: url("/assets/images/contact/hero.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+}
+
+/* Gradient layer */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hero-gradient);
+  z-index: 1;
+}
+
+.hero__container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+  margin-bottom: 125px;
+}
+
+/* Hero texts */
+.hero__subtitle {
+  color: var(--color-neutral-white);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-7xl);
+  line-height: var(--line-height-tight);
+}
+
+.hero__message {
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-xl);
+}
+
+.hero__title,
+.hero__subtitle {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Contact Cards Grid (Channels)
    ========================================================================== */
 /* 4-column direct contact channels grid */
 .principal {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
 }
 
 /* Individual contact channel card */
 .principal__subcontainer {
-  padding: 10px 20px;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-sm);
   background-color: var(--color-background);
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.principal__subcontainer:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
 /* Highlighted WhatsApp channel with primary brand gradient */
@@ -81,8 +118,59 @@
   color: var(--color-emphasis-text);
 }
 
+.principal__whatsapp-title,
+.principal__whatsapp-subtitle,
+.principal__whatsapp-message {
+  color: var(--color-neutral-white);
+}
+
+/* Contact channel icons */
+.principal__whatsapp-icon,
+.principal__subcontainer-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Contact channel titles */
+.principal__whatsapp-title,
+.principal__subcontainer-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-tight);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-medium);
+}
+
+.principal__subcontainer-title,
+.principal__subcontainer-subtitle {
+  color: var(--color-text-main);
+}
+
+/* Contact channel primary details */
+.principal__whatsapp-subtitle,
+.principal__subcontainer-subtitle {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Contact channel helper / status messages */
+.principal__subcontainer-message,
+.principal__whatsapp-message {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-normal);
+}
+
+.principal__subcontainer-message {
+  color: var(--color-text-muted);
+}
+
 /* ==========================================================================
-   4. Budget Request & Contact Form Section
+   Budget Request & Contact Form Section
    ========================================================================== */
 /* Light gray background section container */
 .form {
@@ -112,25 +200,82 @@
 
 /* WhatsApp direct trigger button */
 .form__button-whatsapp {
-  color: var(--color-emphasis-text);
-  background-color: black;
-  padding: 10px;
-  border-radius: var(--radius-sm);
+  padding: 12px 24px;
   max-width: 370px;
-  text-align: center;
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
 }
 
 /* Right Column: White elevated form card */
 .form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   background-color: white;
   border-radius: var(--radius-xl);
-  padding: 25px 40px;
+  padding: 30px 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Two-column row for Name & Phone */
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* Form Group container: Label + Input */
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+/* Form Labels */
+.form__label {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-main);
+}
+
+/* Inputs, Select, Textarea common styling */
+.form__input,
+.form__select,
+.form__textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-background);
+  font-size: var(--font-size-md);
+  color: var(--color-text-main);
+  outline: none;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+  box-sizing: border-box;
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--color-primary) 20%, transparent);
+}
+
+.form__textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Submit Button */
+.form__button-submit {
+  padding: 14px 24px;
 }
 
 /* ==========================================================================
-   5. Office Location & Map Section
+   Office Location & Map Section
    ========================================================================== */
 /* Centered location section header & container */
 .location {
@@ -160,65 +305,73 @@
 }
 
 /* ==========================================================================
-   6. Responsiveness
+   Responsiveness
    ========================================================================== */
-/* Tablets & Medium Screens (<= 890px) */
-@media (max-width: 890px) {
-  /* Reduce horizontal margins */
-  .hero__container,
-  .principal,
-  .form__container,
-  .location {
-    padding: 0 var(--page-padding-md);
-  }
-
-  .principal,
-  .location {
-    padding: 40px var(--page-padding-md);
-  }
-
-  .form {
-    padding: 40px 0;
-  }
-
+/* Laptops & Smaller Desktops (<= 1200px) */
+@media (max-width: 1200px) {
   /* Transition contact channels grid to 2 columns */
   .principal {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   /* Stack form CTA text and form inputs into a single column */
   .form__container {
     grid-template-columns: 1fr;
   }
+
+  .form__text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Tablets & Medium Screens (<= 890px) */
+@media (max-width: 890px) {
+  /* Reduce horizontal margins */
+  .location,
+  .hero,
+  .form,
+  .principal {
+    padding: 50px var(--page-padding-md);
+  }
+
+  /* Scale down large subtitles on tablets */
+  .form__subtitle,
+  .location__subtitle {
+    font-size: var(--font-size-6xl);
+  }
 }
 
 /* Mobile Devices & Small Screens (<= 600px) */
 @media (max-width: 600px) {
   /* Compact horizontal padding for mobile */
-  .hero__container,
-  .principal,
-  .form__container,
-  .location {
-    padding: 0 var(--page-padding-sm);
-  }
-
-  .principal,
-  .location {
-    padding: 30px var(--page-padding-sm);
-  }
-
-  .form {
-    padding: 30px 0;
+  .location,
+  .hero,
+  .form,
+  .principal {
+    padding: 50px var(--page-padding-sm);
   }
 
   /* Single column contact cards on mobile */
   .principal {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Single column for form fields on mobile */
+  .form__row {
     grid-template-columns: 1fr;
+  }
+
+  .form__form {
+    padding: 24px 20px;
   }
 
   /* Scale down large subtitles on mobile */
   .form__subtitle,
   .location__subtitle {
-    font-size: var(--font-size-4xl);
+    font-size: var(--font-size-5xl);
   }
 }

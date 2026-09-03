@@ -34,7 +34,7 @@
          Direct Contact Channels Grid (Main Content)
          ==================================================================== -->
     <main class="principal container">
-      <!-- WhatsApp Direct Channel (Highlighted with Brand Gradient) -->
+      <!-- WhatsApp Direct Channel -->
       <div class="principal__whatsapp principal__subcontainer">
         <img
           src="/assets/icons/white-sms.svg"
@@ -85,10 +85,10 @@
         />
         <h3 class="principal__subcontainer-title">Endereço</h3>
         <span class="principal__subcontainer-subtitle"
-          >R. Saldanha Marinho, 299 Centro</span
+          >R. Saldanha Marinho, 299</span
         >
         <span class="principal__subcontainer-message"
-          >Lajeado, RS - 95900-020</span
+          >Centro - Lajeado, RS - 95900-020</span
         >
       </div>
     </main>
@@ -109,7 +109,8 @@
           >
           <a
             href="https://wa.me/5551993948340?text=Ol%C3%A1%2C%20tudo%20bem%3F"
-            class="form__button-whatsapp"
+            class="form__button-whatsapp btn btn--dark"
+            target="_blank"
             >Chamar no WhatsApp</a
           >
         </div>
@@ -117,56 +118,80 @@
         <!-- Interactive Budget Request Form -->
         <form class="form__form">
           <!-- Name & Phone Row -->
-          <div class="form__name-phone-container">
-            <label for="name" class="form__name-label">Nome completo</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              required
-              class="form__name-input"
-            />
+          <div class="form__row">
+            <div class="form__group">
+              <label for="name" class="form__label">Nome completo</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                class="form__input"
+              />
+            </div>
 
-            <label for="telephone" class="form__phone-label"
-              >Telefone / Whatsapp</label
-            >
-            <input
-              type="tel"
-              name="telephone"
-              id="telephone"
-              required
-              class="form__phone-input"
-            />
+            <div class="form__group">
+              <label for="telephone" class="form__label"
+                >Telefone / Whatsapp</label
+              >
+              <input
+                type="tel"
+                name="telephone"
+                id="telephone"
+                required
+                class="form__input"
+              />
+            </div>
           </div>
 
           <!-- Email Field -->
-          <label for="email" class="form__email-label">E-mail</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            class="form__email-input"
-          />
+          <div class="form__group">
+            <label for="email" class="form__label">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              class="form__input"
+            />
+          </div>
 
           <!-- Customer Type Field -->
-          <label for="customer_type" class="form__customer-type-label"
-            >Tipo de cliente</label
-          >
-          <input
-            type="text"
-            name="customer_type"
-            id="customer_type"
-            required
-            placeholder="Ex: Residencial / Comercial / Condomínio / Indústrias / Outro"
-            class="form__customer-type-input"
-          />
+          <div class="form__group">
+            <label for="customer_type" class="form__label"
+              >Tipo de cliente</label
+            >
+            <select
+              name="customer_type"
+              id="customer_type"
+              class="form__select"
+            >
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="home">Residencial</option>
+              <option value="commercial">Comercial</option>
+              <option value="condominium">Condomínio</option>
+              <option value="industry">Indústrias</option>
+              <option value="other">Outro</option>
+            </select>
+          </div>
 
           <!-- Project Description / Observations Field -->
-          <label for="obs" class="form__obs-label"
-            >Mensagem / Descrição de necessidade</label
-          >
-          <textarea class="form__obs-input"> </textarea>
+          <div class="form__group">
+            <label for="obs" class="form__label"
+              >Mensagem / Descrição de necessidade</label
+            >
+            <textarea name="obs" id="obs" class="form__textarea"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="form__button-submit btn btn--primary btn--full">
+            <img
+              src="/assets/icons/white-send-budget.svg"
+              alt="Ícone de envio"
+              class="form__button-icon btn__icon"
+            />
+            <span>Solicitar orçamento</span>
+          </button>
         </form>
       </div>
     </section>
@@ -179,6 +204,7 @@
       <h3 class="location__subtitle">Onde estamos</h3>
       <div class="location__iframe-container">
         <iframe
+          title="Localização da TechPro no Google Maps"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3473.8817348908747!2d-51.96835822218365!3d-29.46146357522235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951c61647e87482b%3A0x4255ab800bfbd4d0!2sR.%20Saldanha%20Marinho%2C%20299%20-%20Centro%2C%20Lajeado%20-%20RS%2C%2095900-207!5e0!3m2!1spt-BR!2sbr!4v1788184331781!5m2!1spt-BR!2sbr"
           width="600"
           height="450"
