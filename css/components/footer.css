@@ -22,13 +22,14 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 16px;
   padding: 24px 20px;
+  box-sizing: border-box;
 }
 
-/* Email Icon on the Left */
+/* Email Icon on the Left (Proportional square matching the entire form height) */
 .footer__email-wrapper {
   display: flex;
   align-items: center;
@@ -36,14 +37,21 @@
   padding: 8px;
   background: var(--primary-gradient);
   border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.footer__mail {
+  object-fit: contain;
 }
 
 /* Title & Inputs Container */
 .footer__inputs-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 6px;
+  gap: 8px;
   flex: 1;
   width: 100%;
 }
@@ -51,9 +59,9 @@
 .footer__inputs-text {
   margin: 0;
   color: var(--color-emphasis-text);
-  font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-regular);
-  line-height: 1.2;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
 }
 
 /* Inputs & Submit Button Grid */
@@ -61,19 +69,24 @@
   display: grid;
   grid-template-columns: 1fr 1fr auto;
   gap: 10px;
-  flex: 1;
+  align-items: center;
   width: 100%;
 }
 
 .footer__input {
   width: 100%;
-  height: 32px;
+  height: 38px;
   box-sizing: border-box;
-  border: none;
+  border: 1px solid transparent;
   border-radius: var(--radius-sm);
-  padding: 0 10px;
+  padding: 0 14px;
   font-size: var(--font-size-md);
-  line-height: 32px;
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  outline: none;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .footer__input::placeholder {
@@ -81,19 +94,15 @@
   font-size: var(--font-size-md);
 }
 
+.footer__input:focus {
+  border-color: var(--color-button-footer);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--color-button-footer) 30%, transparent);
+}
+
 .footer__button {
-  height: 32px;
-  width: 100%;
-  box-sizing: border-box;
-  font-size: var(--font-size-md);
-  padding: 0 20px;
-  border: none;
-  border-radius: var(--radius-sm);
-  background-color: var(--color-button-footer);
-  color: var(--color-emphasis-text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 38px;
+  min-width: 120px;
 }
 
 /* ==========================================================================
@@ -133,8 +142,23 @@
 /* ==========================================================================
    Footer Responsiveness
    ========================================================================== */
-/* Tablets (<= 890px): 2 columns for info and stacked inputs */
+/* Tablets & Medium Screens (<= 890px): Empilha as caixas mais cedo */
 @media (max-width: 890px) {
+  .footer__form {
+    align-items: flex-start;
+  }
+
+  .footer__email-wrapper {
+    width: 48px;
+    height: 48px;
+    padding: 6px;
+  }
+
+  .footer__mail {
+    width: 30px;
+    height: 24px;
+  }
+
   .footer__info {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -143,18 +167,65 @@
     padding: 0 var(--page-padding-md);
   }
 
+  /* Empilha Nome, E-mail e Botão */
   .footer__inputs-button {
     grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* Botão alinhado à esquerda */
+  .footer__button {
+    width: auto;
+    justify-self: end;
+    align-self: flex-end;
+  }
+}
+
+/* Mobile Devices (<= 600px) */
+@media (max-width: 600px) {
+  .footer__form {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  .footer__email-wrapper {
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    align-self: center;
+  }
+
+  .footer__mail {
+    width: 28px;
+    height: 22px;
+  }
+
+  .footer__inputs-wrapper {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__inputs-text {
+    font-size: var(--font-size-2xl);
+    text-align: center;
+  }
+
+  .footer__inputs-button {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
   }
 
   .footer__button {
     width: 50%;
-    justify-self: end;
+    height: 38px;
+    justify-self: center;
+    align-self: center;
   }
-}
 
-/* Smartphones (<= 600px): Single column */
-@media (max-width: 600px) {
   .footer__info {
     grid-template-columns: 1fr;
   }
@@ -162,9 +233,4 @@
   .footer__container {
     padding: 0 var(--page-padding-sm);
   }
-
-  .footer__inputs-text {
-    font-size: var(--font-size-xl);
-  }
 }
-
