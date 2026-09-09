@@ -5,6 +5,8 @@
 @import "variables.css";
 @import "components/header.css";
 @import "components/footer.css";
+@import "pages/industry.css";
+@import "pages/customers.css";
 
 /* ==========================================================================
    Reset & Box Model

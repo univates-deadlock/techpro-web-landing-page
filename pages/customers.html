@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechPro - Clientes</title>
+    <title>TechPro | Clientes</title>
     <link rel="stylesheet" href="/css/global.css" />
     <link
       rel="icon"
@@ -12,11 +12,319 @@
     />
     <script type="module" src="/js/main.js"></script>
   </head>
-  <body>
+  <!--
+    Página Clientes.
+    A classe "page-customers" no <body> escopa os estilos de hero no
+    css/pages/customers.css, evitando conflito com a página Indústria.
+  -->
+  <body class="page-customers">
     <site-header></site-header>
 
-    <main class="container">
-      <h1>Clientes</h1>
+    <main class="site-content">
+      <!-- ========== HERO ========== -->
+      <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-image-overlay"></div>
+
+        <div class="clients-container">
+          <div class="hero-content">
+            <span class="hero-tag">ATENDIMENTO PERSONALIZADO</span>
+            <h1 class="hero-title">
+              Clientes específicos, soluções sob medida
+            </h1>
+            <p class="hero-text">
+              Cada cliente tem necessidades únicas. Por isso projetamos soluções específicas
+              para cada tipo de público e ambiente.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CLIENTES CARDS ========== -->
+      <section class="clientes">
+        <div class="clients-container">
+          <div class="clientes-grid">
+            <!-- Card: Residências -->
+            <article class="cliente-card">
+              <div class="cliente-card__header">
+                <div class="cliente-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 14L16 5L28 14V27C28 27.5304 27.7893 28.0391 27.4142 28.4142C27.0391 28.7893 26.5304 29 26 29H6C5.46957 29 4.96086 28.7893 4.58579 28.4142C4.21071 28.0391 4 27.5304 4 27V14Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 29V17H20V29" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <a class="cliente-card__button" href="/pages/not_implemented.html">Produtos</a>
+              </div>
+              <h2 class="cliente-card__title">Residências</h2>
+              <p class="cliente-card__text">
+                Projetos personalizados para casas e apartamentos, com integração à automação residencial.
+              </p>
+              <h3 class="cliente-card__subtitle">Serviços indicados</h3>
+              <div class="cliente-card__tags">
+                <span class="tag">Câmeras</span>
+                <span class="tag">Alarmes</span>
+                <span class="tag">Automação</span>
+              </div>
+              <ul class="cliente-card__list">
+                <li>Tranquilidade para a família</li>
+                <li>Acesso remoto pelo celular</li>
+                <li>Sistemas discretos e elegantes</li>
+              </ul>
+            </article>
+
+            <!-- Card: Indústria -->
+            <article class="cliente-card">
+              <div class="cliente-card__header">
+                <div class="cliente-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 27H28" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 27V17L14 17V27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18 27V12L24 12V27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 12L16 5L26 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <a class="cliente-card__button" href="/pages/industry.html">Produtos</a>
+              </div>
+              <h2 class="cliente-card__title">Indústria</h2>
+              <p class="cliente-card__text">
+                Equipamentos de alta resistência para ambientes industriais críticos.
+              </p>
+              <h3 class="cliente-card__subtitle">Serviços indicados</h3>
+              <div class="cliente-card__tags">
+                <span class="tag">Câmeras PTZ</span>
+                <span class="tag">Perímetro com IA</span>
+                <span class="tag">Manutenção</span>
+              </div>
+              <ul class="cliente-card__list">
+                <li>Cobertura de grandes áreas</li>
+                <li>Monitoramento de perímetros</li>
+                <li>Detecção inteligente de invasões</li>
+              </ul>
+            </article>
+
+            <!-- Card: Empresas e Escritórios -->
+            <article class="cliente-card">
+              <div class="cliente-card__header">
+                <div class="cliente-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 27H26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 27V8H24V27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 27V21H16V27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 12H16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M20 12H21" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M20 17H21" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M12 17H16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <a class="cliente-card__button" href="/pages/not_implemented.html">Produtos</a>
+              </div>
+              <h2 class="cliente-card__title">Empresas e Escritórios</h2>
+              <p class="cliente-card__text">
+                Integração com sistemas corporativos e proteção de dados sensíveis.
+              </p>
+              <h3 class="cliente-card__subtitle">Serviços indicados</h3>
+              <div class="cliente-card__tags">
+                <span class="tag">Controle de acesso</span>
+                <span class="tag">Câmeras IP</span>
+                <span class="tag">Automações com IA</span>
+              </div>
+              <ul class="cliente-card__list">
+                <li>Controle de horários e setores</li>
+                <li>Reconhecimento facial</li>
+                <li>Relatórios automáticos</li>
+              </ul>
+            </article>
+
+            <!-- Card: Instituições -->
+            <article class="cliente-card">
+              <div class="cliente-card__header">
+                <div class="cliente-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 27H28" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 27V14H10V27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 27V14H26V27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 5L6 14H26L16 5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 27V20H18V27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <a class="cliente-card__button" href="/pages/not_implemented.html">Produtos</a>
+              </div>
+              <h2 class="cliente-card__title">Instituições</h2>
+              <p class="cliente-card__text">
+                Soluções de segurança para escolas, universidades, hospitais e órgãos públicos, com foco em controle, monitoramento e proteção de pessoas.
+              </p>
+              <h3 class="cliente-card__subtitle">Serviços indicados</h3>
+              <div class="cliente-card__tags">
+                <span class="tag">Controle de acesso</span>
+                <span class="tag">Monitoramento IP</span>
+                <span class="tag">Alarmes inteligentes</span>
+              </div>
+              <ul class="cliente-card__list">
+                <li>Controle seguro de entrada e saída de pessoas</li>
+                <li>Monitoramento contínuo de áreas sensíveis</li>
+                <li>Resposta rápida a situações de emergência</li>
+              </ul>
+            </article>
+
+            <!-- Card: Transportadoras -->
+            <article class="cliente-card">
+              <div class="cliente-card__header">
+                <div class="cliente-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="11" width="20" height="12" rx="2" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="8" cy="23" r="3" stroke="white" stroke-width="2.5"/>
+                    <circle cx="21" cy="23" r="3" stroke="white" stroke-width="2.5"/>
+                    <path d="M23 17H28C29.1046 17 30 17.8954 30 19V21C30 22.1046 29.1046 23 28 23H27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <a class="cliente-card__button" href="/pages/not_implemented.html">Produtos</a>
+              </div>
+              <h2 class="cliente-card__title">Transportadoras</h2>
+              <p class="cliente-card__text">
+                Proteção de cargas, veículos e centros logísticos com monitoramento em tempo real e gestão integrada de segurança.
+              </p>
+              <h3 class="cliente-card__subtitle">Serviços indicados</h3>
+              <div class="cliente-card__tags">
+                <span class="tag">Rastreamento</span>
+                <span class="tag">Câmeras veiculares</span>
+                <span class="tag">Controle perimetral</span>
+              </div>
+              <ul class="cliente-card__list">
+                <li>Acompanhamento da frota em tempo real</li>
+                <li>Maior segurança para motoristas e mercadorias</li>
+                <li>Redução de perdas e ocorrências operacionais</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== APLICAÇÕES / TABELA ========== -->
+      <section class="aplicacoes">
+        <div class="clients-container">
+          <span class="aplicacoes-tag">APLICAÇÕES</span>
+          <h2 class="aplicacoes-title">Cada produto, cada cliente</h2>
+          <p class="aplicacoes-text">Veja como cada solução se adapta ao seu perfil.</p>
+
+          <div class="aplicacoes-table-wrapper">
+            <table class="aplicacoes-table">
+              <thead>
+                <tr>
+                  <th class="aplicacoes-table__first">Produtos/Clientes</th>
+                  <th>Residência</th>
+                  <th>Condomínio</th>
+                  <th>Comércio</th>
+                  <th>Indústria</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="aplicacoes-table__row-title">Câmeras</td>
+                  <td><span class="check"></span></td>
+                  <td><span class="check"></span></td>
+                  <td><span class="check"></span></td>
+                  <td><span class="check"></span></td>
+                </tr>
+                <tr>
+                  <td class="aplicacoes-table__row-title">Alarmes</td>
+                  <td><span class="check"></span></td>
+                  <td><span class="check"></span></td>
+                  <td><span class="check"></span></td>
+                  <td><span class="check"></span></td>
+                </tr>
+                <tr>
+                  <td class="aplicacoes-table__row-title">Controle de Acesso</td>
+                  <td><span class="cross"></span></td>
+                  <td><span class="check"></span></td>
+                  <td><span class="check"></span></td>
+                  <td><span class="check"></span></td>
+                </tr>
+                <tr>
+                  <td class="aplicacoes-table__row-title">Automações com IA</td>
+                  <td><span class="check"></span></td>
+                  <td><span class="check"></span></td>
+                  <td><span class="cross"></span></td>
+                  <td><span class="check"></span></td>
+                </tr>
+                <tr>
+                  <td class="aplicacoes-table__row-title">Manutenção</td>
+                  <td><span class="check"></span></td>
+                  <td><span class="check"></span></td>
+                  <td><span class="check"></span></td>
+                  <td><span class="check"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SERVIÇOS EM DESTAQUE ========== -->
+      <section class="servicos-destaque">
+        <div class="clients-container">
+          <h2 class="servicos-destaque__title">Serviços em destaque</h2>
+
+          <div class="servicos-destaque__grid">
+            <article class="servico-card">
+              <div class="servico-card__image">
+                <img src="/assets/images/pages/Imagem6.png" alt="Instalação de câmera externa em residência" />
+              </div>
+              <p class="servico-card__caption">Instalação de câmera externa em residência</p>
+            </article>
+
+            <article class="servico-card">
+              <div class="servico-card__image">
+                <img src="/assets/images/pages/Imagem5.png" alt="Controle de acesso em condomínio residencial" />
+              </div>
+              <p class="servico-card__caption">Controle de acesso em condomínio residencial</p>
+            </article>
+
+            <article class="servico-card">
+              <div class="servico-card__image">
+                <img src="/assets/images/pages/Imagem4.png" alt="Central de monitoramento corporativa" />
+              </div>
+              <p class="servico-card__caption">Central de monitoramento corporativa</p>
+            </article>
+
+            <article class="servico-card">
+              <div class="servico-card__image">
+                <img src="/assets/images/pages/Imagem3.png" alt="Sistema de alarme em comércio" />
+              </div>
+              <p class="servico-card__caption">Sistema de alarme em comércio</p>
+            </article>
+
+            <article class="servico-card">
+              <div class="servico-card__image">
+                <img src="/assets/images/pages/Imagem2.png" alt="Câmeras de perímetro em indústria" />
+              </div>
+              <p class="servico-card__caption">Câmeras de perímetro em indústria</p>
+            </article>
+
+            <article class="servico-card">
+              <div class="servico-card__image">
+                <img src="/assets/images/pages/Imagem1.png" alt="Segurança integrada para residência de alto padrão" />
+              </div>
+              <p class="servico-card__caption">Segurança integrada para residência de alto padrão</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CTA FINAL ========== -->
+      <section class="cta-final">
+        <div class="clients-container">
+          <div class="cta-final__content">
+            <h2 class="cta-final__title">Pronto para proteger o que mais importa?</h2>
+            <p class="cta-final__text">
+              Solicite um orçamento gratuito e personalizado. Nossa equipe responde em até 1 hora útil.
+            </p>
+            <a class="cta-final__button" href="/pages/contact.html">FAÇA SEU ORÇAMENTO</a>
+          </div>
+          <div class="cta-final__image">
+            <img src="/assets/mascote-orcamento.png" alt="Robô TechPro" />
+          </div>
+        </div>
+      </section>
     </main>
 
     <site-footer></site-footer>

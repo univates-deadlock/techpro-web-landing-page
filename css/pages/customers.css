@@ -1,0 +1,763 @@
+/* ==========================================================================
+   CUSTOMERS PAGE STYLES
+   Página Clientes — estilos específicos desta página.
+   Importado no css/global.css (após industry.css).
+   Escopo: os seletores de hero são prefixados com .page-customers
+   (classe no <body>) para não conflitar com o hero da página Indústria.
+   ========================================================================== */
+
+/* ==========================================================================
+   HERO SECTION
+   Banner de topo com gradiente azul, imagem de fundo e texto de apresentação.
+   min-height 577px = mesma altura do hero da página Indústria, para manter
+   as duas páginas visualmente consistentes.
+   ========================================================================== */
+.page-customers .hero {
+  position: relative;
+  min-height: 577px; /* altura mínima igual à da página Indústria */
+  display: flex;
+  align-items: flex-start;
+  padding: 30px 0 0;
+  overflow: hidden; /* impede a imagem de fundo de vazar */
+  background: linear-gradient(
+    270deg,
+    #00325f 0%,
+    #0e1930 89.42%
+  ); /* gradiente azul escuro de fundo */
+}
+
+/* Camadas de fundo (gradiente + imagem) ocupam todo o hero */
+.page-customers .hero-bg,
+.page-customers .hero-image-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Gradiente azul escuro (mesmo do .hero) */
+.page-customers .hero-bg {
+  background: linear-gradient(
+    270deg,
+    #00325f 0%,
+    #0e1930 89.42%
+  );
+}
+
+/* Imagem de fundo (aperto de mãos), centralizada e cobrindo o hero */
+.page-customers .hero-image-overlay {
+  background: url('/assets/fundo_clientes.png') center/cover no-repeat;
+  opacity: 1.0;
+}
+
+/* Container do hero — padding lateral de 120px alinha o texto com o header */
+.page-customers .hero > .clients-container {
+  position: relative;
+  z-index: 3; /* acima da imagem de fundo (z-index 1) */
+  width: 100%;
+  padding: 0 120px;
+  box-sizing: border-box;
+}
+
+/* Bloco de texto do hero (tag + título + parágrafo).
+   padding-top 120px desce o bloco para baixo do header. */
+.page-customers .hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 889px;
+  margin-left: 5px;
+  padding-top: 120px;
+  text-align: left; /* garante alinhamento à esquerda */
+}
+
+/* Tag "ATENDIMENTO PERSONALIZADO" — texto pequeno em caixa alta.
+   margin-bottom 24px cria o respiro entre a tag e o título. */
+.page-customers .hero-tag {
+  display: block;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: clamp(14px, 1.25vw, 24px); /* fluido: 14px a 24px */
+  line-height: 1.2;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+/* Título principal — fonte fluida e semibold.
+   margin-left -5px puxa o título levemente para a esquerda,
+   alinhando-o com a tag acima. */
+.page-customers .hero-title {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: clamp(36px, 5vw, 75px); /* fluido: 36px a 75px */
+  line-height: 109.74%;
+  color: var(--color-hero-text);
+  margin: 0 0 20px;
+  margin-left: -5px;
+}
+
+/* Parágrafo descritivo — mesmo alinhamento do título */
+.page-customers .hero-text {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: clamp(16px, 1.6vw, 24px); /* fluido: 16px a 24px */
+  line-height: 1.3;
+  color: #dedede;
+  margin: 0;
+  margin-left: -5px;
+  max-width: 889px;
+}
+
+/* ==========================================================================
+   CLIENTES CARDS SECTION
+   Grade de cards por tipo de cliente (Residências, Indústria, Empresas...).
+   ========================================================================== */
+.clientes {
+  padding: 80px 0 100px;
+  background-color: #ffffff;
+}
+
+.clientes > .clients-container {
+  width: 100%;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+/* Grade de cards: 3 colunas iguais */
+.clientes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  row-gap: 24px;
+  width: 100%;
+  max-width: none;
+}
+
+/* Card de cliente — ícone + botão + título + texto + tags + lista */
+.cliente-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 42px 44px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 420px; /* altura mínima para cards uniformes */
+  box-shadow: 0 0 11.5px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho do card: ícone à esquerda, botão "Produtos" à direita */
+.cliente-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+/* Ícone do card — quadrado verde com gradiente */
+.cliente-card__icon {
+  width: 71px;
+  height: 70px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #2db884 0%, #1be398 100%);
+  border-radius: 11px;
+  padding: 10px;
+}
+
+.cliente-card__icon svg {
+  width: 42px;
+  height: 42px;
+}
+
+/* Botão "Produtos" — gradiente azul no canto superior direito */
+.cliente-card__button {
+  width: 164px;
+  height: 41px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(85.95deg, #23c3f3 -41.64%, #05517e 113.68%);
+  box-shadow: 0 0 5.9px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  color: #ffffff;
+  font-family: var(--font-family-primary);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  transition: opacity 0.2s ease;
+}
+
+.cliente-card__button:hover {
+  opacity: 0.9;
+}
+
+/* Título do card (ex: "Residências") */
+.cliente-card__title {
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+  color: #000000;
+  margin: 0;
+}
+
+/* Texto descritivo do card */
+.cliente-card__text {
+  font-family: var(--font-family-primary);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  margin: 0;
+  min-height: 66px; /* altura mínima para alinhar os cards */
+}
+
+/* Subtítulo "Serviços indicados" */
+.cliente-card__subtitle {
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #031c3b;
+  margin: 10px 0 0;
+}
+
+/* Tags de serviços (ex: Câmeras, Alarmes, Automação) */
+.cliente-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+/* Tag individual — pílula cinza clara */
+.tag {
+  height: 37px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #edf2f8;
+  border-radius: 50px;
+  color: #000000;
+  font-family: var(--font-family-primary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+/* Lista de benefícios do card */
+.cliente-card__list {
+  margin: 8px 0 0;
+  padding-left: 14px;
+  font-family: var(--font-family-primary);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: #000000;
+}
+
+.cliente-card__list li {
+  margin-bottom: 2px;
+}
+
+.cliente-card__list li::marker {
+  color: #000000;
+}
+
+/* ==========================================================================
+   APLICAÇÕES / TABLE SECTION
+   Tabela que relaciona produtos x tipos de cliente (check/cross).
+   ========================================================================== */
+.aplicacoes {
+  padding: 80px 100px 100px;
+  background-color: #edf2f8;
+}
+
+/* Tag "APLICAÇÕES" */
+.aplicacoes-tag {
+  display: block;
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #2db884;
+  margin-bottom: 16px;
+}
+
+/* Título "Cada produto, cada cliente" */
+.aplicacoes-title {
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 109.74%;
+  color: #000000;
+  margin: 0 0 16px;
+}
+
+/* Texto de apoio abaixo do título */
+.aplicacoes-text {
+  font-family: var(--font-family-primary);
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #b0b0b0;
+  margin: 0 0 48px;
+}
+
+/* Wrapper da tabela — fundo branco, cantos arredondados, scroll horizontal */
+.aplicacoes-table-wrapper {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  overflow-x: auto; /* permite rolar em telas estreitas */
+  border-radius: 26px;
+  background-color: #ffffff;
+  box-shadow: 0 0 11.5px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabela de aplicações */
+.aplicacoes-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: var(--font-family-primary);
+  font-size: 16px;
+  table-layout: fixed;
+}
+
+/* Cabeçalho da tabela — fundo azul escuro, texto branco */
+.aplicacoes-table thead {
+  background-color: #0e1930;
+  color: #ffffff;
+}
+
+.aplicacoes-table th {
+  height: 68px;
+  padding: 0 24px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Primeira coluna (nomes dos produtos) alinhada à esquerda */
+.aplicacoes-table__first {
+  text-align: left;
+}
+
+/* Cantos arredondados do cabeçalho */
+.aplicacoes-table thead th:first-child {
+  border-radius: 26px 0 0 0;
+}
+
+.aplicacoes-table thead th:last-child {
+  border-radius: 0 26px 0 0;
+}
+
+/* Células do corpo da tabela */
+.aplicacoes-table td {
+  height: 67px;
+  padding: 0 24px;
+  text-align: center;
+  border-bottom: 1px solid #d9d9d9;
+  color: #000000;
+  font-weight: 500;
+}
+
+/* Remove a borda inferior da última linha */
+.aplicacoes-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Cantos arredondados do rodapé da tabela */
+.aplicacoes-table tbody tr:last-child .aplicacoes-table__row-title {
+  border-radius: 0 0 0 26px;
+}
+
+.aplicacoes-table tbody tr:last-child td:last-child {
+  border-radius: 0 0 26px 0;
+}
+
+/* Nome do produto na primeira coluna */
+.aplicacoes-table__row-title {
+  text-align: left;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  white-space: nowrap;
+  background-color: #ffffff;
+}
+
+/* Ícones check (verde) e cross (vermelho) desenhados via CSS */
+.check,
+.cross {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+/* Check: "V" verde desenhado com borda */
+.check::before {
+  content: '';
+  width: 8px;
+  height: 14px;
+  border: solid #2db884;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.cross {
+  position: relative;
+}
+
+/* Cross: "X" vermelho desenhado com duas linhas */
+.cross::before,
+.cross::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 2.5px;
+  background-color: #cb0000;
+  border-radius: 1px;
+}
+
+.cross::before {
+  transform: rotate(45deg);
+}
+
+.cross::after {
+  transform: rotate(-45deg);
+}
+
+/* ==========================================================================
+   SERVIÇOS EM DESTAQUE SECTION
+   Grade de 6 cards com fotos de serviços realizados.
+   ========================================================================== */
+.servicos-destaque {
+  padding: 80px 0 100px;
+  background-color: #ffffff;
+}
+
+.servicos-destaque > .clients-container {
+  width: 100%;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+/* Título "Serviços em destaque" */
+.servicos-destaque__title {
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 109.74%;
+  color: #000000;
+  margin: 0 0 48px;
+}
+
+/* Grade de cards de destaque: 3 colunas de até 519px */
+.servicos-destaque__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 519px));
+  gap: 31px;
+  row-gap: 14px;
+  width: 100%;
+  max-width: 1624px;
+}
+
+/* Card de destaque — foto + legenda */
+.servico-card {
+  width: 519px;
+  background: #d9d9d9;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 0 11.5px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Área da foto do card */
+.servico-card__image {
+  width: 100%;
+  height: 396px;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 26px 26px 0 0;
+}
+
+/* Foto preenche o card sem distorcer */
+.servico-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Legenda da foto — texto centralizado na parte inferior */
+.servico-card__caption {
+  margin: 0;
+  padding: 26px 20px;
+  min-height: 75px;
+  background: #ffffff;
+  border-radius: 0 0 26px 26px;
+  font-family: var(--font-family-primary);
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   CTA FINAL SECTION
+   Chamada final com título, texto, botão e mascote (robô).
+   ========================================================================== */
+.cta-final {
+  position: relative;
+  padding: 64px 0 0;
+  background: linear-gradient(
+    270deg,
+    #00325f 0%,
+    #0e1930 89.42%
+  ); /* mesmo gradiente do hero */
+  overflow: hidden;
+  min-height: 451px;
+}
+
+/* Container do CTA: texto à esquerda, imagem (mascote) à direita */
+.cta-final > .clients-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 40px;
+  padding: 0 141px;
+  box-sizing: border-box;
+}
+
+/* Bloco de texto do CTA */
+.cta-final__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding-bottom: 80px;
+  max-width: 1084px;
+}
+
+/* Título "Pronto para proteger o que mais importa?" */
+.cta-final__title {
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  font-size: 75px;
+  line-height: 109.74%;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Texto de apoio do CTA */
+.cta-final__text {
+  font-family: var(--font-family-primary);
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #dedede;
+  margin: 0;
+  max-width: 888px;
+}
+
+/* Botão "FAÇA SEU ORÇAMENTO" — gradiente verde */
+.cta-final__button {
+  height: 56px;
+  padding: 0 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #2db884 0%, #1be398 100%);
+  border-radius: 11px;
+  color: #ffffff;
+  font-family: var(--font-family-primary);
+  font-size: 20px;
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+}
+
+.cta-final__button:hover {
+  opacity: 0.9;
+}
+
+/* Imagem do mascote (robô) — alinhada à base, com leve sobreposição */
+.cta-final__image {
+  align-self: flex-end;
+  width: 466px;
+  height: 491px;
+  margin-bottom: -40px; /* sobrepõe a imagem na borda inferior */
+}
+
+.cta-final__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ==========================================================================
+   CUSTOMERS PAGE RESPONSIVENESS
+   Media queries em ordem decrescente de largura (maior → menor).
+   ========================================================================== */
+
+/* Telas largas (<= 1700px): centraliza as grades e ajusta os cards */
+@media (max-width: 1700px) {
+  .servicos-destaque__grid,
+  .clientes-grid {
+    justify-content: center;
+  }
+
+  .servico-card {
+    width: 100%;
+  }
+
+  .servico-card__image {
+    height: auto;
+    aspect-ratio: 519 / 396; /* mantém a proporção da foto */
+  }
+}
+
+/* Laptops / telas médias (<= 1280px): grades em 2 colunas, CTA empilhado */
+@media (max-width: 1280px) {
+  .page-customers .hero {
+    min-height: auto;
+    padding: 100px 0 60px;
+  }
+
+  .page-customers .hero > .clients-container,
+  .clientes > .clients-container,
+  .servicos-destaque > .clients-container,
+  .cta-final > .clients-container {
+    padding: 0 60px;
+  }
+
+  .clientes-grid,
+  .servicos-destaque__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .cliente-card,
+  .servico-card {
+    width: 100%;
+  }
+
+  .aplicacoes-table-wrapper {
+    margin: 0;
+  }
+
+  /* CTA empilha: texto centralizado, imagem oculta */
+  .cta-final > .clients-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .cta-final__content {
+    align-items: center;
+  }
+
+  .cta-final__image {
+    display: none;
+  }
+}
+
+/* Tablets (<= 890px): grades em 1 coluna, títulos menores */
+@media (max-width: 890px) {
+  .page-customers .hero {
+    padding: 80px 0 40px;
+  }
+
+  .clientes,
+  .aplicacoes,
+  .servicos-destaque {
+    padding: 60px 0 80px;
+  }
+
+  .aplicacoes-title,
+  .servicos-destaque__title,
+  .cta-final__title {
+    font-size: 42px;
+  }
+
+  .clientes-grid,
+  .servicos-destaque__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cliente-card,
+  .servico-card {
+    max-width: 560px;
+    margin: 0 auto; /* centraliza o card na coluna única */
+  }
+
+  .aplicacoes-table th,
+  .aplicacoes-table td {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+}
+
+/* Smartphones pequenos (<= 680px): reduz paddings e fontes da tabela */
+@media (max-width: 680px) {
+  .page-customers .hero > .clients-container,
+  .clientes > .clients-container,
+  .servicos-destaque > .clients-container,
+  .cta-final > .clients-container {
+    padding: 0 20px;
+  }
+
+  .page-customers .hero-tag,
+  .aplicacoes-tag {
+    letter-spacing: 0.1em;
+  }
+
+  .aplicacoes-table th,
+  .aplicacoes-table td {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .cliente-card__title {
+    font-size: 28px;
+  }
+}
+
+/* Smartphones (<= 480px): reduz paddings para caber na tela */
+@media (max-width: 480px) {
+  .page-customers .hero {
+    padding: 80px 0 30px;
+  }
+
+  .clientes,
+  .aplicacoes,
+  .servicos-destaque {
+    padding: 40px 0 60px;
+  }
+
+  .cta-final {
+    padding-top: 50px;
+  }
+
+  .cta-final__content {
+    padding-bottom: 40px;
+  }
+}
