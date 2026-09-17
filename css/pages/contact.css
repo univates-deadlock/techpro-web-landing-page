@@ -14,15 +14,6 @@
   width: 100%;
 }
 
-/* Section Tag / Badge Title */
-.green_title {
-  text-transform: uppercase;
-  color: var(--color-primary);
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-regular);
-  letter-spacing: var(--letter-spacing-wide);
-}
-
 /* Section Subtitles */
 .form__subtitle,
 .location__subtitle {
