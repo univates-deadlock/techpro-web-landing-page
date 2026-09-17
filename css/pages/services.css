@@ -1,0 +1,344 @@
+/* ==========================================================================
+   Services Page
+   ========================================================================== */
+
+.services {
+  padding: 0;
+}
+
+/* ==========================================================================
+   Services Hero
+   ========================================================================== */
+
+.services__hero {
+  position: relative;
+  padding: 50px 0;
+  background: url("/assets/images/services/hero.jpg") center / cover no-repeat;
+}
+
+.services__hero::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: var(--hero-gradient);
+}
+
+.services__hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+  margin-bottom: 125px;
+}
+
+.services__eyebrow {
+  margin: 0;
+}
+
+.services__hero-title {
+  max-width: 20ch;
+  margin: 0;
+  color: var(--color-neutral-white);
+  font-size: var(--font-size-7xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+.services__hero-description {
+  max-width: 58ch;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-normal);
+}
+
+.services__container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* ==========================================================================
+   Service Sections
+   ========================================================================== */
+
+.services__section {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 4fr);
+  align-items: start;
+  gap: 50px;
+  padding: var(--spacing-lg) 0;
+}
+
+.services__section:first-child {
+  padding-top: 0;
+}
+
+.services__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* ==========================================================================
+   Reusable Service Summary Component
+   ========================================================================== */
+
+service-summary,
+service-details {
+  display: block;
+}
+
+.service-summary {
+  width: 100%;
+}
+
+.service-summary__icon-wrapper {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+}
+
+.service-summary__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
+}
+
+.service-summary__title {
+  margin: 0 0 var(--spacing-2xs);
+  color: var(--color-text-main);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+.service-summary__description {
+  max-width: 50ch;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-normal);
+}
+
+/* ==========================================================================
+   Reusable Service Details Component
+   ========================================================================== */
+
+.service-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.service-details__card {
+  min-height: 10rem;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-background);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.service-details__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-details__title {
+  margin: 0 0 var(--spacing-md);
+  color: var(--color-text-main);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+.service-details__list {
+  display: grid;
+  gap: var(--spacing-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-details__item {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: var(--spacing-xs);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-snug);
+}
+
+.service-details__check {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.services__cta {
+  align-self: center;
+  min-width: min(100%, 17rem);
+}
+
+/* ==========================================================================
+   Service Process
+   ========================================================================== */
+
+.services__process {
+  padding: 50px 0;
+  background-color: var(--color-background-secondary);
+}
+
+.services__process-container {
+  width: 100%;
+}
+
+.services__process-title {
+  margin: 0 0 var(--spacing-xl);
+  color: var(--color-text-main);
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+.services__process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+}
+
+service-process-card {
+  display: block;
+}
+
+.services__process-card {
+  height: 100%;
+  min-height: 12rem;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-background);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.services__process-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.services__process-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-bottom: var(--spacing-sm);
+  object-fit: contain;
+}
+
+.services__process-card-title {
+  margin: 0 0 var(--spacing-xs);
+  color: var(--color-text-main);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+.services__process-card-description {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-snug);
+}
+
+.services__process-cta {
+  display: flex;
+  width: fit-content;
+  margin: var(--spacing-xl) auto 0;
+}
+
+/* ==========================================================================
+   Responsive Layout
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .services__process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 890px) {
+  .services__hero-title,
+  .services__process-title {
+    font-size: var(--font-size-6xl);
+  }
+
+  .services__section {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 700px) {
+  .services__process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .service-details {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .service-details__card {
+    min-height: 0;
+  }
+
+  .services__cta {
+    width: 100%;
+  }
+
+  .services__hero-title {
+    font-size: var(--font-size-5xl);
+  }
+
+  .services__process-title {
+    font-size: var(--font-size-5xl);
+  }
+
+  .services__process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services__process-card {
+    min-height: 0;
+  }
+
+  .services__process-cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-details__card,
+  .services__process-card {
+    transition: box-shadow var(--transition-normal);
+  }
+
+  .service-details__card:hover,
+  .services__process-card:hover {
+    transform: none;
+  }
+}
