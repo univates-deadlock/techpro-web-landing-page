@@ -1,0 +1,134 @@
+/* ====================================================================
+                                  1) Hero Section
+    =================================================================*/
+
+/* Hero banner with full-bleed background cover image */
+.hero-institutional {
+    position: relative;
+    background: url("/assets/images/institutional/hero.png") no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    padding: 100px 0 90px 0;
+}
+
+/* Gradient layer */
+.hero-institutional::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hero-gradient);
+  z-index: 1;
+}
+
+.hero-institutional .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-institutional__title {
+    font-size: var(--font-size-6xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    color: var(--color-emphasis-text);
+    margin: var(--spacing-sm) 0;
+    max-width: 950px;
+}
+
+.hero-institutional__description {
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-xl);
+    margin: 0;
+    max-width: 750px;
+}
+
+/* ====================================================================
+                                  2) about Us Section
+    =================================================================*/
+
+    .about-institutional {
+      padding: var(--spacing-4xl) 0;
+      background-color: var(--color-background);
+    }
+
+    .about-institutional__title {
+      font-size: var(--font-size-5xl);
+      font-weight: var(--font-weight-semibold);
+      line-height: var(--line-height-tight);
+      color: var(--color-text-main);
+      line-height: var(--line-height-tight);
+      margin: var(--spacing-xs) 0 var(--spacing-xl) 0;
+    }
+
+    .about-institutional__text {
+      font-size: var(--font-size-md);
+      color: var(--color-text-body);
+      line-height: var(--line-height-relaxed);
+      margin: 0;
+    }
+
+/* ====================================================================
+                                  3) Statistics Section
+    =================================================================*/
+
+.stats-institutional {
+  background: linear-gradient(
+    90deg,
+    #0E1930 0%,
+    #00325F 100%
+  );
+  padding: var(--spacing-3xl) 0;
+  color: var(--color-emphasis-text);
+}
+
+/*Align the 4 cards*/
+.stats-institutional__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.stats-institutional__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stats-institutional__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.stats-institutional__number {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+}
+
+.stats-institutional__label {
+    font-size: var(--font-size-sm);
+    color: var(--color-neutral-400);
+    margin-top: var(--spacing-2xs);
+}
+
+
+/* ====================================================================
+                                  Responsiveness
+    =================================================================*/
+@media (max-width: 768px) {
+  .hero-institutional__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .about-institutional__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .stats-institutional__grid {
+    grid-template-columns: 1fr;
+  }
+
+}
