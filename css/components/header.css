@@ -13,7 +13,7 @@ site-header {
 }
 
 .header {
-  padding: var(--spacing-md) var(--page-padding-lg);
+  padding: var(--spacing-xs) var(--page-padding-lg);
 }
 
 /* Grid container: 3 columns (Logo on left, Nav in center, Button on right) */
@@ -34,7 +34,7 @@ site-header {
 }
 
 .header__logo {
-  height: 40px;
+  height: 32px;
   width: auto;
 }
 
@@ -47,14 +47,14 @@ site-header {
 .header__list {
   display: flex;
   align-items: center;
-  gap: var(--spacing-2xl);
+  gap: var(--spacing-xl);
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .header__link {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-main);
   position: relative;
@@ -72,8 +72,8 @@ site-header {
 /* Action Button ("Solicitar orçamento") */
 .header__button {
   justify-self: end;
-  width: 196px;
-  height: 48px;
+  width: 168px;
+  height: 36px;
   border-radius: var(--radius-md);
   font-size: var(--font-size-sm);
 }
@@ -122,7 +122,7 @@ site-header {
    Header Responsiveness
    ========================================================================== */
 /* Smaller screens / Laptops (<= 1280px) */
-@media (max-width: 1280px) {
+@media (max-width: 980px) {
   .header {
     padding: var(--spacing-md) var(--page-padding-lg);
   }
@@ -243,4 +243,3 @@ site-header {
     padding: var(--spacing-sm) var(--page-padding-sm);
   }
 }
-
