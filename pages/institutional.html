@@ -12,11 +12,168 @@
     />
     <script type="module" src="/js/main.js"></script>
   </head>
+  
   <body>
+    <!-- Global Site Header Web Component -->
     <site-header></site-header>
 
-    <main class="container">
-      <h1>Institucional</h1>
+    <main class="site-content">
+
+    <!-- ====================================================================
+    Hero Section
+    ========================================================================= -->
+    <section class="hero-institutional">
+      <div class="container">
+        <h1 class="green_title">INSTITUCIONAL</h1>
+        <h2 class="hero-institutional__title">Mais de 8 anos de experiência no mercado</h2>
+        <p class="hero-institutional__description">
+          Somos especialistas em segurança eletrônica com paixão por cuidar das 
+          pessoas e do patrimônio dos nossos clientes.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+    About Us Section
+    ========================================================================= -->
+    <section class="about-institutional">
+      <div class="container">
+        <p class="green_title">QUEM SOMOS</p>
+        <h2 class="about-institutional__title">Tecnologia, confiança e proximidade</h2>
+
+        <div class="about-institutional__content">
+          <p class="about-institutional__text">
+            Segurança, tecnologia e confiança para proteger o que realmente importa. <br> A TechPro nasceu com um propósito claro: Oferecer soluções em segurança eletrônica, automação e instalações elétricas com qualidade, transparência e atendimento próximo. Acreditamos em criar relações de confiança e entregar soluções que façam sentido para cada cliente.
+          </p>
+          <p class="about-institutional__text">
+            Atuando em residências, empresas e empreendimentos de diferentes portes, desenvolvemos projetos personalizados, sempre considerando as necessidades específicas de cada ambiente. Nossa equipe busca unir tecnologia, praticidade e segurança para proporcionar mais tranquilidade no dia a dia de quem confia em nosso trabalho.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+    Statistics Section
+    ========================================================================= -->
+    <section class="stats-institutional">
+      <div class="container">
+        <div class="stats-institutional__grid">
+
+          <institutional-stat-card
+            icon="/assets/icons/green-clock.svg"
+            icon-alt="Ícone de relógio verde"
+            value="+02"
+            label="Anos no mercado"
+          ></institutional-stat-card>
+          <institutional-stat-card
+            icon="/assets/icons/green-users.svg"
+            icon-alt="Ícone de usuários verdes"
+            value="+300"
+            label="Clientes atendidos"
+          ></institutional-stat-card>
+          <institutional-stat-card
+            icon="/assets/icons/green-shield.svg"
+            icon-alt="Ícone de escudo verde"
+            value="+1.000"
+            label="Equipamentos instalados"
+          ></institutional-stat-card>
+          <institutional-stat-card
+            icon="/assets/icons/green-medal.svg"
+            icon-alt="Ícone de medalha verde"
+            value="97%"
+            label="Satisfação dos clientes"
+          ></institutional-stat-card>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+    Purpose Section
+    ========================================================================= -->    
+    <section class="purpose-institutional"> 
+      <div class="container"> 
+        <p class="green_title">NOSSA ESSÊNCIA</p>
+
+        <div class="purpose-institutional__grid">
+          
+          <institutional-purpose-card
+            class="purpose-institutional__column"
+            heading="Missão"
+          >
+            Proporcionar tranquilidade para famílias, empresas e pessoas que depositam sua confiança em nosso trabalho, através de soluções preventivas e tecnológicas.
+          </institutional-purpose-card>
+          <institutional-purpose-card
+            class="purpose-institutional__column"
+            heading="Visão"
+          >
+            Ser reconhecida como referência no setor, oferecendo soluções inovadoras e de alta qualidade, garantindo a satisfação de nossos clientes e o desenvolvimento sustentável de nossa equipe.
+          </institutional-purpose-card>
+          <institutional-purpose-card
+            class="purpose-institutional__column"
+            heading="Valores"
+          >
+            Nosso compromisso está baseado em três pilares, confiança, qualidade e proximidade
+          </institutional-purpose-card>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+    Quote
+    ========================================================================= -->    
+    <section class="quote-institutional">
+      <div class="container">
+        <div class="quote-institutional__wrapper">
+
+          <!-- image column -->
+           <div class="quote-institutional__image-container">
+            <img
+              src="/assets/images/institutional/enterprise-man.png"
+              alt="Foto do fundador"
+              class="quote-institutional__image"
+            />
+           </div>
+
+           <!-- quote column -->
+            <blockquote class="quote-institutional__card">
+              <img
+                src="/assets/icons/green-quotation-mark.svg"
+                alt="Ícone de aspas verdes"
+                class="quote-institutional__icon"
+              />
+                <p class="quote-institutional__text">
+                  Nós lidamos com sonhos, patrimônios e com a confiança das pessoas. Por isso, nosso compromisso é ser uma parceira de verdade, entregando não apenas tecnologia, mas segurança, transparência e a certeza de que ninguém ficará sem suporte quando precisar.
+                </p>
+
+            </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+    Call to action
+    ========================================================================= -->  
+
+    <section class="cta-institutional">
+      <div class="container">
+        <div class="cta-institutional__content">
+
+          <h2 class="cta-institutional__title">
+            Vamos conversar sobre sua segurança?
+          </h2>
+
+          <div class="cta-institutional__actions">
+            <a href="/pages/services.html" class="btn btn--outline">Ver serviços</a>
+
+            <a href="/pages/contact.html" class="btn btn--primary">Fale conosco</a>
+          </div>    
+
+        </div>
+      </div>
+    </section>
+
     </main>
 
     <site-footer></site-footer>
