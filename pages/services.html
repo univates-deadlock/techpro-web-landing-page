@@ -15,8 +15,151 @@
   <body>
     <site-header></site-header>
 
-    <main class="container">
-      <h1>Serviços</h1>
+    <main class="services">
+      <!-- Services Hero -->
+      <section class="services__hero" aria-labelledby="services-title">
+        <div class="services__hero-content container">
+          <p class="services__eyebrow green_title">Serviços</p>
+          <h1 class="services__hero-title" id="services-title">
+            Soluções completas em segurança eletrônica
+          </h1>
+          <p class="services__hero-description">
+            Projetamos, instalamos e damos suporte a sistemas modernos para proteger
+            pessoas, patrimônio e operações.
+          </p>
+        </div>
+      </section>
+
+      <div class="services__container container">
+        <!-- Serviço: Manutenção e suporte -->
+        <section class="services__section" aria-label="Manutenção e suporte">
+          <service-summary
+            icon="/assets/icons/white-wrench.svg"
+            icon-alt="Ícone de manutenção"
+            title="Manutenção e suporte"
+            description="Manutenção preventiva e corretiva para todos os sistemas instalados, garantindo funcionamento contínuo e segurança ininterrupta."
+          ></service-summary>
+          <div class="services__content">
+            <service-details
+              benefits='["Atendimento ágil em emergências", "Manutenção preventiva agendada", "Diagnóstico técnico completo", "Suporte 24h para clientes ativos"]'
+              applications='["Sistemas instalados pela TechPro", "Sistemas de outros fornecedores", "Atualização e modernização de equipamentos"]'
+            ></service-details>
+            <a class="services__cta btn btn--secondary btn--lg" href="/pages/contact.html">
+              Solicitar manutenção
+            </a>
+          </div>
+        </section>
+
+        <!-- Serviço: Sistemas de alarme -->
+        <section class="services__section" aria-label="Sistemas de alarme">
+          <service-summary
+            icon="/assets/icons/white-bell.svg"
+            icon-alt="Ícone de alarme"
+            title="Sistemas de alarme"
+            description="Centrais de alarme com sensores de presença, abertura e sirenes, integradas a aplicativos de notificação imediata em qualquer dispositivo."
+          ></service-summary>
+          <div class="services__content">
+            <service-details
+              benefits='["Notificação imediata em caso de invasão", "Sensores de presença e abertura", "Integração com app no celular", "Histórico de eventos detalhado"]'
+              applications='["Casas, apartamentos e sítios", "Comércios e escritórios", "Galpões e estoques", "Áreas restritas em condomínios"]'
+            ></service-details>
+          </div>
+        </section>
+
+        <!-- Serviço: Automações com IA -->
+        <section class="services__section" aria-label="Automações com IA">
+          <service-summary
+            icon="/assets/icons/white-cpu.svg"
+            icon-alt="Ícone de automação"
+            title="Automações com IA"
+            description="Soluções inteligentes que utilizam inteligência artificial para detectar comportamentos suspeitos, reconhecer rostos e automatizar respostas."
+          ></service-summary>
+          <div class="services__content">
+            <service-details
+              benefits='["Detecção de movimento inteligente", "Reconhecimento facial de placas", "Alertas em tempo real no celular", "Redução drástica de falsos alarmes", "Integrações com automação residencial"]'
+              applications='["Áreas externas com grande circulação", "Portarias inteligentes", "Indústrias com perímetro extenso", "Residências de alto padrão"]'
+            ></service-details>
+          </div>
+        </section>
+
+        <!-- Serviço: Controle de acesso -->
+        <section class="services__section" aria-label="Controle de acesso">
+          <service-summary
+            icon="/assets/icons/white-key.svg"
+            icon-alt="Ícone de chave"
+            title="Controle de acesso"
+            description="Soluções para controlar e registrar entradas e saídas, com fechaduras eletrônicas, leitores biométricos, catracas e portões automatizados."
+          ></service-summary>
+          <div class="services__content">
+            <service-details
+              benefits='["Acesso liberado apenas para autorizados", "Registro automático de entradas e saídas", "Múltiplos níveis de permissão", "Integração com câmeras e alarmes"]'
+              applications='["Portarias de condomínios", "Empresas e escritórios", "Catracas em academias e clubes", "Áreas restritas industriais"]'
+            ></service-details>
+          </div>
+        </section>
+
+        <!-- Serviço: Câmeras de segurança -->
+        <section class="services__section" aria-label="Câmeras de segurança">
+          <service-summary
+            icon="/assets/icons/white-camera.svg"
+            icon-alt="Ícone de câmera"
+            title="Câmeras de segurança"
+            description="Monitoramento em alta definição, com acesso remoto pelo celular."
+          ></service-summary>
+          <div class="services__content">
+            <service-details
+              benefits='["Monitoramento em tempo real", "Inibição de furtos e invasões", "Acesso remoto pelo celular", "Visão noturna e infravermelho"]'
+              applications='["Residências e condomínios", "Lojas, escritórios e empresas", "Indústrias e galpões"]'
+            ></service-details>
+          </div>
+        </section>
+      </div>
+
+      <!-- Service Process -->
+      <section class="services__process" aria-labelledby="services-process-title">
+        <div class="services__process-container container">
+          <p class="services__eyebrow green_title">Processo</p>
+          <h2 class="services__process-title" id="services-process-title">
+            Como funciona o atendimento
+          </h2>
+
+          <div class="services__process-grid">
+            <service-process-card
+              icon="/assets/icons/green-phone.svg"
+              title="Contato"
+              description="Você nos chama pelo WhatsApp, telefone ou formulário."
+            ></service-process-card>
+
+            <service-process-card
+              icon="/assets/icons/green-paper.svg"
+              title="Proposta"
+              description="Enviamos um orçamento detalhado e personalizado."
+            ></service-process-card>
+
+            <service-process-card
+              icon="/assets/icons/green-headset.svg"
+              title="Suporte"
+              description="Acompanhamento contínuo e manutenção garantida."
+            ></service-process-card>
+
+            <service-process-card
+              icon="/assets/icons/green-clipboard.svg"
+              title="Visita técnica"
+              description="Avaliamos o local e entendemos suas necessidades."
+            ></service-process-card>
+
+            <service-process-card
+              icon="/assets/icons/green-helmet.svg"
+              title="Instalação"
+              description="Equipe especializada executa o projeto com precisão."
+            ></service-process-card>
+          </div>
+
+          <a class="services__process-cta btn btn--primary" href="/pages/contact.html">
+            Solicitar orçamento
+          </a>
+        </div>
+      </section>
     </main>
 
     <site-footer></site-footer>
