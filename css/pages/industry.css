@@ -1,195 +1,48 @@
 /* ==========================================================================
-   INDUSTRY PAGE STYLES
-   Página Indústria — estilos específicos desta página.
-   Importado no css/global.css (após components, antes de customers.css).
-   Escopo: todos os seletores de hero são prefixados com .page-industry
-   (classe no <body>) para não conflitar com o hero da página Clientes.
+   Industry Page Styles
+   Page-specific section layout; shared cards and hero styles live in components.
    ========================================================================== */
 
 /* ==========================================================================
-   HERO SECTION
-   Banner de topo com imagem de fundo industrial e texto de apresentação.
-   min-height 577px = mesma altura do hero da página Clientes, para manter
-   as duas páginas visualmente consistentes.
+   Available Services
    ========================================================================== */
-.page-industry .hero {
-  position: relative;
-  min-height: 577px; /* altura mínima igual à da página Clientes */
-  display: flex;
-  align-items: flex-start;
-  padding: 30px 0 0;
-  overflow: hidden; /* impede a imagem de fundo de vazar */
-}
-
-/* Camada de fundo (transparente aqui; a imagem fica no overlay abaixo) */
-.page-industry .hero-bg {
-  position: absolute;
-  inset: 0;
-  background: transparent;
-  z-index: 1;
-}
-
-/* Imagem de fundo industrial, centralizada e cobrindo todo o hero.
-   ?v=3 = cache-buster para forçar o navegador a recarregar a imagem. */
-.page-industry .hero-image-overlay {
-  position: absolute;
-  inset: 0;
-  background: url('/assets/fundo_industria.png?v=3') center/cover no-repeat;
-  opacity: 1;
-  z-index: 1;
-}
-
-/* Bloco de texto do hero (tag + título + parágrafo).
-   padding-top 120px desce o bloco para baixo do header. */
-.page-industry .hero-content {
-  position: relative;
-  z-index: 3; /* acima da imagem de fundo (z-index 1) */
-  max-width: 889px;
-  padding-top: 120px;
-  margin-left: 5px;
-}
-
-/* Tag "ATENDIMENTO PERSONALIZADO" — texto pequeno em caixa alta */
-.page-industry .hero-tag {
-  display: block;
-  font-family: var(--font-family-primary);
-  font-weight: var(--font-weight-regular);
-  font-size: clamp(14px, 1.25vw, 24px); /* fluido: 14px a 24px */
-  line-height: 1.2;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-sm);
-}
-
-/* Título principal "Indústria" — fonte fluida e semibold */
-.page-industry .hero-title {
-  font-family: var(--font-family-primary);
-  font-weight: var(--font-weight-semibold);
-  font-size: clamp(36px, 5vw, 75px); /* fluido: 36px a 75px */
-  line-height: 109.74%;
-  color: var(--color-hero-text);
-  margin-bottom: 20px;
-}
-
-/* Parágrafo descritivo abaixo do título */
-.page-industry .hero-text {
-  font-family: var(--font-family-primary);
-  font-weight: var(--font-weight-regular);
-  font-size: clamp(16px, 1.6vw, 24px); /* fluido: 16px a 24px */
-  line-height: 1.3;
-  color: #dedede;
-}
-
-/* ==========================================================================
-   SERVIÇOS SECTION
-   Grade de 6 cards com os serviços oferecidos para a indústria.
-   ========================================================================== */
-.servicos {
+.industry-services {
   padding: 38px 0 100px;
 }
 
-/* Título da seção "Serviços disponíveis" */
-.servicos-title {
+.industry-services__title {
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-semibold);
-  font-size: clamp(28px, 4vw, 64px); /* fluido: 28px a 64px */
+  font-size: clamp(28px, 4vw, 64px);
   line-height: 109.74%;
   color: var(--color-background-hero);
   margin-bottom: 38px;
 }
 
-/* Grade de cards: 3 colunas de até 519px cada */
-.servicos-grid {
+.industry-services__grid {
+  /* Equal row heights keep card captions aligned. */
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 519px));
-  grid-auto-rows: 1fr; /* cards da mesma linha com a mesma altura */
+  grid-auto-rows: 1fr;
   gap: var(--spacing-lg);
   width: 100%;
   justify-content: start;
 }
 
-/* Card de serviço — imagem no topo + legenda embaixo */
-.card {
-  width: 100%;
-  height: 100%;
-  background: var(--color-background);
-  box-shadow: 0 0 11.5px 3px rgba(0, 0, 0, 0.1);
-  border-radius: 26px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Card 2 (câmeras de perímetro) com sombra mais forte para destaque */
-.card-2 {
-  box-shadow: 0 0 11.5px 3px rgba(0, 0, 0, 0.25);
-}
-
-/* Área da imagem do card — ocupa o espaço flexível */
-.card-image-wrap {
-  width: 100%;
-  flex: 1;
-  min-height: 0;
-  overflow: hidden;
-  border-radius: 26px 26px 0 0;
-}
-
-/* Imagem preenche o card sem distorcer */
-.card-image-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Proporção (aspect-ratio) de cada imagem, mantida conforme o Figma.
-   Largura base 519px; a altura varia por card. */
-.card-1 .card-image-wrap img { aspect-ratio: 519 / 336; }
-.card-2 .card-image-wrap img { aspect-ratio: 519 / 409; }
-.card-3 .card-image-wrap img { aspect-ratio: 519 / 410; }
-.card-4 .card-image-wrap img { aspect-ratio: 519 / 392; }
-.card-5 .card-image-wrap img { aspect-ratio: 519 / 392; }
-.card-6 .card-image-wrap img { aspect-ratio: 519 / 392; }
-
-/* Legenda do card — texto centralizado na parte inferior */
-.card-body {
-  width: 100%;
-  min-height: 75px;
-  background: var(--color-background);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 0 0 26px 26px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 24px;
-}
-
-.card-body p {
-  font-family: var(--font-family-primary);
-  font-weight: var(--font-weight-regular);
-  font-size: clamp(16px, 1.5vw, 20px); /* fluido: 16px a 20px */
-  line-height: 1.2;
-  text-align: center;
-  color: var(--color-background-hero);
-}
-
 /* ==========================================================================
-   CTA SECTION
-   Botão "Solicitar orçamento" centralizado no fim da página.
+   Contact Invitation
    ========================================================================== */
-.cta-section {
+.industry-cta {
   padding-bottom: 56px;
   display: flex;
   justify-content: center;
 }
 
-/* Botão principal de chamada para ação */
-.btn-cta-main {
+.industry-cta__button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: min(100%, 389px); /* até 389px, mas nunca maior que a tela */
+  width: min(100%, 389px);
   height: 93px;
   background: var(--primary-gradient);
   border-radius: var(--radius-md);
@@ -197,93 +50,61 @@
   gap: var(--spacing-sm);
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-bold);
-  font-size: clamp(20px, 2.5vw, 32px); /* fluido: 20px a 32px */
+  font-size: clamp(20px, 2.5vw, 32px);
   line-height: 1.2;
   text-align: center;
   color: var(--color-emphasis-text);
 }
 
 /* ==========================================================================
-   INDUSTRY PAGE RESPONSIVENESS
-   Media queries em ordem decrescente de largura (maior → menor).
+   Responsive Layout
    ========================================================================== */
-
-/* Telas muito largas (>= 1920px): limita a largura do conteúdo a 1600px */
 @media (min-width: 1920px) {
-  .page-industry .hero-content,
-  .servicos .container,
-  .cta-section {
+  .industry-services .container,
+  .industry-cta {
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-/* Laptops / telas médias (<= 1280px): hero centralizado, grade em 2 colunas */
 @media (max-width: 1280px) {
-  .page-industry .hero {
-    height: auto;
-    min-height: 577px;
-    padding: 140px var(--page-padding-lg) 80px;
-    align-items: center;
-  }
-
-  .page-industry .hero-content {
-    padding-top: 0; /* o padding do hero já dá o espaçamento */
-  }
-
-  .servicos-grid {
+  /* Use two service columns on smaller desktop screens. */
+  .industry-services__grid {
     grid-template-columns: repeat(2, minmax(0, 519px));
   }
 }
 
-/* Tablets (<= 890px): hero sem altura mínima, grade em 1 coluna */
 @media (max-width: 890px) {
-  .page-industry .hero {
-    min-height: auto;
-    padding: 140px var(--page-padding-md) 60px;
-  }
-
-  .servicos {
+  /* Stack service cards while keeping each card at a readable width. */
+  .industry-services {
     padding: 60px 0 80px;
   }
 
-  .servicos-title {
+  .industry-services__title {
     margin-bottom: 40px;
   }
 
-  .servicos-grid {
+  .industry-services__grid {
     grid-template-columns: 1fr;
   }
 
-  .card {
+  .image-card--industry {
     max-width: 519px;
-    margin: 0 auto; /* centraliza o card na coluna única */
+    margin: 0 auto;
   }
 
-  .btn-cta-main {
+  .industry-cta__button {
     height: 72px;
   }
 }
 
-/* Smartphones pequenos (<= 680px): reduz o espaçamento das letras da tag */
-@media (max-width: 680px) {
-  .page-industry .hero-tag {
-    letter-spacing: 0.1em;
-  }
-}
-
-/* Smartphones (<= 480px): reduz os paddings para caber na tela */
 @media (max-width: 480px) {
-  .page-industry .hero {
-    padding: 120px var(--page-padding-sm) 40px;
-  }
-
-  .servicos {
+  .industry-services {
     padding: 40px 0 60px;
   }
 
-  .cta-section {
+  .industry-cta {
     padding-bottom: 40px;
   }
 }
