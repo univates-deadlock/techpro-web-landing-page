@@ -12,103 +12,70 @@
     />
     <script type="module" src="/js/main.js"></script>
   </head>
-  <!--
-    Página Indústria.
-    A classe "page-industry" no <body> escopa os estilos de hero no
-    css/pages/industry.css, evitando conflito com a página Clientes.
-  -->
   <body class="page-industry">
     <site-header></site-header>
 
     <main class="site-content">
-      <!-- ========== HERO ========== -->
-      <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-image-overlay"></div>
+      <!-- Industry hero -->
+      <audience-hero
+        class="audience-hero audience-hero--industry"
+        eyebrow="ATENDIMENTO PERSONALIZADO"
+        heading="Indústria"
+      >
+        Soluções inteligentes em segurança, automação e infraestrutura elétrica para aumentar a eficiência e proteger o patrimônio da sua indústria.
+      </audience-hero>
 
+      <!-- Industry services -->
+      <section class="industry-services">
         <div class="container">
-          <div class="hero-content">
-            <span class="hero-tag">ATENDIMENTO PERSONALIZADO</span>
-            <h1 class="hero-title">Indústria</h1>
-            <p class="hero-text">
-              Soluções inteligentes em segurança, automação e infraestrutura elétrica para aumentar a eficiência e proteger o patrimônio da sua indústria.
-            </p>
+          <h2 class="industry-services__title">Serviços disponíveis</h2>
+
+          <div class="industry-services__grid">
+            <industry-service-card
+              image="/assets/images/customers/industry/industry-01.png"
+              alt="Leitura automática de placas de veículos"
+              caption="Leitura automática de placas de veículos"
+              variant="plate-reading"
+            ></industry-service-card>
+
+            <industry-service-card
+              image="/assets/images/customers/industry/industry-02.png"
+              alt="Câmeras de perímetro em indústria"
+              caption="Câmeras de perímetro em indústria"
+              variant="perimeter-camera"
+            ></industry-service-card>
+
+            <industry-service-card
+              image="/assets/images/customers/industry/industry-03.png"
+              alt="Central de monitoramento corporativa"
+              caption="Central de monitoramento corporativa"
+              variant="monitoring"
+            ></industry-service-card>
+
+            <industry-service-card
+              image="/assets/images/customers/industry/industry-04.png"
+              alt="Automação de iluminação de ambientes"
+              caption="Automação de iluminação de ambientes"
+            ></industry-service-card>
+
+            <industry-service-card
+              image="/assets/images/customers/industry/industry-05.png"
+              alt="Câmeras térmicas e noturnas"
+              caption="Câmeras térmicas e noturnas"
+            ></industry-service-card>
+
+            <industry-service-card
+              image="/assets/images/customers/industry/industry-06.png"
+              alt="Mapas de calor e contagem de pessoas"
+              caption="Mapas de calor e contagem de pessoas"
+            ></industry-service-card>
           </div>
         </div>
       </section>
 
-      <!-- ========== SERVIÇOS ========== -->
-      <section class="servicos">
-        <div class="container">
-          <h2 class="servicos-title">Serviços disponíveis</h2>
-
-          <div class="servicos-grid">
-            <!-- Card 1: Leitura automática de placas -->
-            <article class="card card-1">
-              <div class="card-image-wrap">
-                <img src="/assets/leitura-placas.png" alt="Leitura automática de placas de veículos" />
-              </div>
-              <div class="card-body">
-                <p>Leitura automática de placas de veículos</p>
-              </div>
-            </article>
-
-            <!-- Card 2: Câmeras de perímetro -->
-            <article class="card card-2">
-              <div class="card-image-wrap">
-                <img src="/assets/cameras-perimetro.png" alt="Câmeras de perímetro em indústria" />
-              </div>
-              <div class="card-body">
-                <p>Câmeras de perímetro em indústria</p>
-              </div>
-            </article>
-
-            <!-- Card 3: Central de monitoramento -->
-            <article class="card card-3">
-              <div class="card-image-wrap">
-                <img src="/assets/central-monitoramento.png" alt="Central de monitoramento corporativa" />
-              </div>
-              <div class="card-body">
-                <p>Central de monitoramento corporativa</p>
-              </div>
-            </article>
-
-            <!-- Card 4: Automação de iluminação -->
-            <article class="card card-4">
-              <div class="card-image-wrap">
-                <img src="/assets/automacao-iluminacao.png" alt="Automação de iluminação de ambientes" />
-              </div>
-              <div class="card-body">
-                <p>Automação de iluminação de ambientes</p>
-              </div>
-            </article>
-
-            <!-- Card 5: Câmeras térmicas -->
-            <article class="card card-5">
-              <div class="card-image-wrap">
-                <img src="/assets/cameras-termicas.png" alt="Câmeras térmicas e noturnas" />
-              </div>
-              <div class="card-body">
-                <p>Câmeras térmicas e noturnas</p>
-              </div>
-            </article>
-
-            <!-- Card 6: Mapas de calor -->
-            <article class="card card-6">
-              <div class="card-image-wrap">
-                <img src="/assets/mapas-calor.png" alt="Mapas de calor e contagem de pessoas" />
-              </div>
-              <div class="card-body">
-                <p>Mapas de calor e contagem de pessoas</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========== CTA ========== -->
-      <section class="cta-section">
-        <a href="/pages/contact.html" class="btn-cta-main">Solicitar orçamento</a>
+      <!-- Contact invitation -->
+      <section class="industry-cta">
+        <a href="/pages/contact.html" class="industry-cta__button btn btn--primary">Solicitar orçamento</a>
       </section>
     </main>
 

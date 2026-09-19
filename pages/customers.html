@@ -12,246 +12,159 @@
     />
     <script type="module" src="/js/main.js"></script>
   </head>
-  <!--
-    Página Clientes.
-    A classe "page-customers" no <body> escopa os estilos de hero no
-    css/pages/customers.css, evitando conflito com a página Indústria.
-  -->
   <body class="page-customers">
     <site-header></site-header>
 
     <main class="site-content">
-      <!-- ========== HERO ========== -->
-      <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-image-overlay"></div>
+      <!-- Customers hero -->
+      <audience-hero
+        class="audience-hero audience-hero--customers"
+        eyebrow="ATENDIMENTO PERSONALIZADO"
+        heading="Clientes específicos, soluções sob medida"
+      >
+        Cada cliente tem necessidades únicas. Por isso projetamos soluções específicas para cada tipo de público e ambiente.
+      </audience-hero>
 
-        <div class="clients-container">
-          <div class="hero-content">
-            <span class="hero-tag">ATENDIMENTO PERSONALIZADO</span>
-            <h1 class="hero-title">
-              Clientes específicos, soluções sob medida
-            </h1>
-            <p class="hero-text">
-              Cada cliente tem necessidades únicas. Por isso projetamos soluções específicas
-              para cada tipo de público e ambiente.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========== CLIENTES CARDS ========== -->
-      <section class="clientes">
-        <div class="clients-container">
-          <div class="clientes-grid">
-            <!-- Card: Residências -->
-            <article class="cliente-card">
-              <div class="cliente-card__header">
-                <div class="cliente-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 14L16 5L28 14V27C28 27.5304 27.7893 28.0391 27.4142 28.4142C27.0391 28.7893 26.5304 29 26 29H6C5.46957 29 4.96086 28.7893 4.58579 28.4142C4.21071 28.0391 4 27.5304 4 27V14Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 29V17H20V29" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <a class="cliente-card__button" href="/pages/not_implemented.html">Produtos</a>
-              </div>
-              <h2 class="cliente-card__title">Residências</h2>
-              <p class="cliente-card__text">
-                Projetos personalizados para casas e apartamentos, com integração à automação residencial.
-              </p>
-              <h3 class="cliente-card__subtitle">Serviços indicados</h3>
-              <div class="cliente-card__tags">
-                <span class="tag">Câmeras</span>
-                <span class="tag">Alarmes</span>
-                <span class="tag">Automação</span>
-              </div>
-              <ul class="cliente-card__list">
+      <!-- Customer types -->
+      <section class="customer-types">
+        <div class="customers-container">
+          <div class="customer-types__grid">
+            <customer-card
+              heading="Residências"
+              description="Projetos personalizados para casas e apartamentos, com integração à automação residencial."
+              icon="/assets/icons/white-house.svg"
+              product-href="/pages/not_implemented.html"
+            >
+              <span>Câmeras</span>
+              <span>Alarmes</span>
+              <span>Automação</span>
+              <ul>
                 <li>Tranquilidade para a família</li>
                 <li>Acesso remoto pelo celular</li>
                 <li>Sistemas discretos e elegantes</li>
               </ul>
-            </article>
+            </customer-card>
 
-            <!-- Card: Indústria -->
-            <article class="cliente-card">
-              <div class="cliente-card__header">
-                <div class="cliente-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 27H28" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M8 27V17L14 17V27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M18 27V12L24 12V27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 12L16 5L26 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <a class="cliente-card__button" href="/pages/industry.html">Produtos</a>
-              </div>
-              <h2 class="cliente-card__title">Indústria</h2>
-              <p class="cliente-card__text">
-                Equipamentos de alta resistência para ambientes industriais críticos.
-              </p>
-              <h3 class="cliente-card__subtitle">Serviços indicados</h3>
-              <div class="cliente-card__tags">
-                <span class="tag">Câmeras PTZ</span>
-                <span class="tag">Perímetro com IA</span>
-                <span class="tag">Manutenção</span>
-              </div>
-              <ul class="cliente-card__list">
+            <customer-card
+              heading="Indústria"
+              description="Equipamentos de alta resistência para ambientes industriais críticos."
+              icon="/assets/icons/white-industry.svg"
+              product-href="/pages/industry.html"
+            >
+              <span>Câmeras PTZ</span>
+              <span>Perímetro com IA</span>
+              <span>Manutenção</span>
+              <ul>
                 <li>Cobertura de grandes áreas</li>
                 <li>Monitoramento de perímetros</li>
                 <li>Detecção inteligente de invasões</li>
               </ul>
-            </article>
+            </customer-card>
 
-            <!-- Card: Empresas e Escritórios -->
-            <article class="cliente-card">
-              <div class="cliente-card__header">
-                <div class="cliente-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 27H26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M8 27V8H24V27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 27V21H16V27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 12H16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                    <path d="M20 12H21" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                    <path d="M20 17H21" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                    <path d="M12 17H16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-                  </svg>
-                </div>
-                <a class="cliente-card__button" href="/pages/not_implemented.html">Produtos</a>
-              </div>
-              <h2 class="cliente-card__title">Empresas e Escritórios</h2>
-              <p class="cliente-card__text">
-                Integração com sistemas corporativos e proteção de dados sensíveis.
-              </p>
-              <h3 class="cliente-card__subtitle">Serviços indicados</h3>
-              <div class="cliente-card__tags">
-                <span class="tag">Controle de acesso</span>
-                <span class="tag">Câmeras IP</span>
-                <span class="tag">Automações com IA</span>
-              </div>
-              <ul class="cliente-card__list">
+            <customer-card
+              heading="Empresas e Escritórios"
+              description="Integração com sistemas corporativos e proteção de dados sensíveis."
+              icon="/assets/icons/white-company.svg"
+              product-href="/pages/not_implemented.html"
+            >
+              <span>Controle de acesso</span>
+              <span>Câmeras IP</span>
+              <span>Automações com IA</span>
+              <ul>
                 <li>Controle de horários e setores</li>
                 <li>Reconhecimento facial</li>
                 <li>Relatórios automáticos</li>
               </ul>
-            </article>
+            </customer-card>
 
-            <!-- Card: Instituições -->
-            <article class="cliente-card">
-              <div class="cliente-card__header">
-                <div class="cliente-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 27H28" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 27V14H10V27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M22 27V14H26V27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 5L6 14H26L16 5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14 27V20H18V27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <a class="cliente-card__button" href="/pages/not_implemented.html">Produtos</a>
-              </div>
-              <h2 class="cliente-card__title">Instituições</h2>
-              <p class="cliente-card__text">
-                Soluções de segurança para escolas, universidades, hospitais e órgãos públicos, com foco em controle, monitoramento e proteção de pessoas.
-              </p>
-              <h3 class="cliente-card__subtitle">Serviços indicados</h3>
-              <div class="cliente-card__tags">
-                <span class="tag">Controle de acesso</span>
-                <span class="tag">Monitoramento IP</span>
-                <span class="tag">Alarmes inteligentes</span>
-              </div>
-              <ul class="cliente-card__list">
+            <customer-card
+              heading="Instituições"
+              description="Soluções de segurança para escolas, universidades, hospitais e órgãos públicos, com foco em controle, monitoramento e proteção de pessoas."
+              icon="/assets/icons/white-institution.svg"
+              product-href="/pages/not_implemented.html"
+            >
+              <span>Controle de acesso</span>
+              <span>Monitoramento IP</span>
+              <span>Alarmes inteligentes</span>
+              <ul>
                 <li>Controle seguro de entrada e saída de pessoas</li>
                 <li>Monitoramento contínuo de áreas sensíveis</li>
                 <li>Resposta rápida a situações de emergência</li>
               </ul>
-            </article>
+            </customer-card>
 
-            <!-- Card: Transportadoras -->
-            <article class="cliente-card">
-              <div class="cliente-card__header">
-                <div class="cliente-card__icon" aria-hidden="true">
-                  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="11" width="20" height="12" rx="2" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle cx="8" cy="23" r="3" stroke="white" stroke-width="2.5"/>
-                    <circle cx="21" cy="23" r="3" stroke="white" stroke-width="2.5"/>
-                    <path d="M23 17H28C29.1046 17 30 17.8954 30 19V21C30 22.1046 29.1046 23 28 23H27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <a class="cliente-card__button" href="/pages/not_implemented.html">Produtos</a>
-              </div>
-              <h2 class="cliente-card__title">Transportadoras</h2>
-              <p class="cliente-card__text">
-                Proteção de cargas, veículos e centros logísticos com monitoramento em tempo real e gestão integrada de segurança.
-              </p>
-              <h3 class="cliente-card__subtitle">Serviços indicados</h3>
-              <div class="cliente-card__tags">
-                <span class="tag">Rastreamento</span>
-                <span class="tag">Câmeras veiculares</span>
-                <span class="tag">Controle perimetral</span>
-              </div>
-              <ul class="cliente-card__list">
+            <customer-card
+              heading="Transportadoras"
+              description="Proteção de cargas, veículos e centros logísticos com monitoramento em tempo real e gestão integrada de segurança."
+              icon="/assets/icons/white-truck.svg"
+              product-href="/pages/not_implemented.html"
+            >
+              <span>Rastreamento</span>
+              <span>Câmeras veiculares</span>
+              <span>Controle perimetral</span>
+              <ul>
                 <li>Acompanhamento da frota em tempo real</li>
                 <li>Maior segurança para motoristas e mercadorias</li>
                 <li>Redução de perdas e ocorrências operacionais</li>
               </ul>
-            </article>
+            </customer-card>
           </div>
         </div>
       </section>
 
-      <!-- ========== APLICAÇÕES / TABELA ========== -->
-      <section class="aplicacoes">
-        <div class="clients-container">
-          <span class="aplicacoes-tag">APLICAÇÕES</span>
-          <h2 class="aplicacoes-title">Cada produto, cada cliente</h2>
-          <p class="aplicacoes-text">Veja como cada solução se adapta ao seu perfil.</p>
+      <!-- Product applications -->
+      <section class="applications">
+        <div class="customers-container">
+          <span class="applications__eyebrow">APLICAÇÕES</span>
+          <h2 class="applications__title">Cada produto, cada cliente</h2>
+          <p class="applications__description">Veja como cada solução se adapta ao seu perfil.</p>
 
-          <div class="aplicacoes-table-wrapper">
-            <table class="aplicacoes-table">
+          <div class="applications__table-wrapper">
+            <table class="applications-table">
               <thead>
                 <tr>
-                  <th class="aplicacoes-table__first">Produtos/Clientes</th>
-                  <th>Residência</th>
-                  <th>Condomínio</th>
-                  <th>Comércio</th>
-                  <th>Indústria</th>
+                  <th scope="col" class="applications-table__first">Produtos/Clientes</th>
+                  <th scope="col">Residência</th>
+                  <th scope="col">Condomínio</th>
+                  <th scope="col">Comércio</th>
+                  <th scope="col">Indústria</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td class="aplicacoes-table__row-title">Câmeras</td>
-                  <td><span class="check"></span></td>
-                  <td><span class="check"></span></td>
-                  <td><span class="check"></span></td>
-                  <td><span class="check"></span></td>
+                  <th scope="row" class="applications-table__row-title">Câmeras</th>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
                 </tr>
                 <tr>
-                  <td class="aplicacoes-table__row-title">Alarmes</td>
-                  <td><span class="check"></span></td>
-                  <td><span class="check"></span></td>
-                  <td><span class="check"></span></td>
-                  <td><span class="check"></span></td>
+                  <th scope="row" class="applications-table__row-title">Alarmes</th>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
                 </tr>
                 <tr>
-                  <td class="aplicacoes-table__row-title">Controle de Acesso</td>
-                  <td><span class="cross"></span></td>
-                  <td><span class="check"></span></td>
-                  <td><span class="check"></span></td>
-                  <td><span class="check"></span></td>
+                  <th scope="row" class="applications-table__row-title">Controle de Acesso</th>
+                  <td><span class="applications-table__status applications-table__status--unavailable" role="img" aria-label="Indisponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
                 </tr>
                 <tr>
-                  <td class="aplicacoes-table__row-title">Automações com IA</td>
-                  <td><span class="check"></span></td>
-                  <td><span class="check"></span></td>
-                  <td><span class="cross"></span></td>
-                  <td><span class="check"></span></td>
+                  <th scope="row" class="applications-table__row-title">Automações com IA</th>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--unavailable" role="img" aria-label="Indisponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
                 </tr>
                 <tr>
-                  <td class="aplicacoes-table__row-title">Manutenção</td>
-                  <td><span class="check"></span></td>
-                  <td><span class="check"></span></td>
-                  <td><span class="check"></span></td>
-                  <td><span class="check"></span></td>
+                  <th scope="row" class="applications-table__row-title">Manutenção</th>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
                 </tr>
               </tbody>
             </table>
@@ -259,69 +172,63 @@
         </div>
       </section>
 
-      <!-- ========== SERVIÇOS EM DESTAQUE ========== -->
-      <section class="servicos-destaque">
-        <div class="clients-container">
-          <h2 class="servicos-destaque__title">Serviços em destaque</h2>
+      <!-- Featured services -->
+      <section class="featured-services">
+        <div class="customers-container">
+          <h2 class="featured-services__title">Serviços em destaque</h2>
 
-          <div class="servicos-destaque__grid">
-            <article class="servico-card">
-              <div class="servico-card__image">
-                <img src="/assets/images/pages/Imagem6.png" alt="Instalação de câmera externa em residência" />
-              </div>
-              <p class="servico-card__caption">Instalação de câmera externa em residência</p>
-            </article>
+          <div class="featured-services__grid">
+            <featured-service-card
+              image="/assets/images/customers/service-01.png"
+              alt="Instalação de câmera externa em residência"
+              caption="Instalação de câmera externa em residência"
+            ></featured-service-card>
 
-            <article class="servico-card">
-              <div class="servico-card__image">
-                <img src="/assets/images/pages/Imagem5.png" alt="Controle de acesso em condomínio residencial" />
-              </div>
-              <p class="servico-card__caption">Controle de acesso em condomínio residencial</p>
-            </article>
+            <featured-service-card
+              image="/assets/images/customers/service-02.png"
+              alt="Controle de acesso em condomínio residencial"
+              caption="Controle de acesso em condomínio residencial"
+            ></featured-service-card>
 
-            <article class="servico-card">
-              <div class="servico-card__image">
-                <img src="/assets/images/pages/Imagem4.png" alt="Central de monitoramento corporativa" />
-              </div>
-              <p class="servico-card__caption">Central de monitoramento corporativa</p>
-            </article>
+            <featured-service-card
+              image="/assets/images/customers/service-03.png"
+              alt="Central de monitoramento corporativa"
+              caption="Central de monitoramento corporativa"
+            ></featured-service-card>
 
-            <article class="servico-card">
-              <div class="servico-card__image">
-                <img src="/assets/images/pages/Imagem3.png" alt="Sistema de alarme em comércio" />
-              </div>
-              <p class="servico-card__caption">Sistema de alarme em comércio</p>
-            </article>
+            <featured-service-card
+              image="/assets/images/customers/service-04.png"
+              alt="Sistema de alarme em comércio"
+              caption="Sistema de alarme em comércio"
+            ></featured-service-card>
 
-            <article class="servico-card">
-              <div class="servico-card__image">
-                <img src="/assets/images/pages/Imagem2.png" alt="Câmeras de perímetro em indústria" />
-              </div>
-              <p class="servico-card__caption">Câmeras de perímetro em indústria</p>
-            </article>
+            <featured-service-card
+              image="/assets/images/customers/service-05.png"
+              alt="Câmeras de perímetro em indústria"
+              caption="Câmeras de perímetro em indústria"
+            ></featured-service-card>
 
-            <article class="servico-card">
-              <div class="servico-card__image">
-                <img src="/assets/images/pages/Imagem1.png" alt="Segurança integrada para residência de alto padrão" />
-              </div>
-              <p class="servico-card__caption">Segurança integrada para residência de alto padrão</p>
-            </article>
+            <featured-service-card
+              image="/assets/images/customers/service-06.png"
+              alt="Segurança integrada para residência de alto padrão"
+              caption="Segurança integrada para residência de alto padrão"
+            ></featured-service-card>
           </div>
         </div>
       </section>
 
-      <!-- ========== CTA FINAL ========== -->
-      <section class="cta-final">
-        <div class="clients-container">
-          <div class="cta-final__content">
-            <h2 class="cta-final__title">Pronto para proteger o que mais importa?</h2>
-            <p class="cta-final__text">
+      <!-- Contact invitation -->
+      <section class="customers-cta">
+        <div class="customers-container">
+          <div class="customers-cta__content">
+            <h2 class="customers-cta__title">Pronto para proteger o que mais importa?</h2>
+            <p class="customers-cta__text">
               Solicite um orçamento gratuito e personalizado. Nossa equipe responde em até 1 hora útil.
             </p>
-            <a class="cta-final__button" href="/pages/contact.html">FAÇA SEU ORÇAMENTO</a>
+            <a class="customers-cta__button btn btn--primary" href="/pages/contact.html">FAÇA SEU ORÇAMENTO</a>
           </div>
-          <div class="cta-final__image">
-            <img src="/assets/mascote-orcamento.png" alt="Robô TechPro" />
+          <div class="customers-cta__image">
+            <img src="/assets/images/home/mascot.png" alt="Robô TechPro" />
           </div>
         </div>
       </section>
