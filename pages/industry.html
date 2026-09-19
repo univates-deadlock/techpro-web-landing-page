@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechPro - Serviços</title>
+    <title>TechPro | Indústria</title>
     <link rel="stylesheet" href="/css/global.css" />
     <link
       rel="icon"
@@ -12,11 +12,71 @@
     />
     <script type="module" src="/js/main.js"></script>
   </head>
-  <body>
+  <body class="page-industry">
     <site-header></site-header>
 
-    <main class="container">
-      <h1>Serviços</h1>
+    <main class="site-content">
+      <!-- Industry hero -->
+      <audience-hero
+        class="audience-hero audience-hero--industry"
+        eyebrow="ATENDIMENTO PERSONALIZADO"
+        heading="Indústria"
+      >
+        Soluções inteligentes em segurança, automação e infraestrutura elétrica para aumentar a eficiência e proteger o patrimônio da sua indústria.
+      </audience-hero>
+
+      <!-- Industry services -->
+      <section class="industry-services">
+        <div class="container">
+          <h2 class="industry-services__title">Serviços disponíveis</h2>
+
+          <div class="industry-services__grid">
+            <industry-service-card
+              image="/assets/images/customers/industry/industry-01.png"
+              alt="Leitura automática de placas de veículos"
+              caption="Leitura automática de placas de veículos"
+              variant="plate-reading"
+            ></industry-service-card>
+
+            <industry-service-card
+              image="/assets/images/customers/industry/industry-02.png"
+              alt="Câmeras de perímetro em indústria"
+              caption="Câmeras de perímetro em indústria"
+              variant="perimeter-camera"
+            ></industry-service-card>
+
+            <industry-service-card
+              image="/assets/images/customers/industry/industry-03.png"
+              alt="Central de monitoramento corporativa"
+              caption="Central de monitoramento corporativa"
+              variant="monitoring"
+            ></industry-service-card>
+
+            <industry-service-card
+              image="/assets/images/customers/industry/industry-04.png"
+              alt="Automação de iluminação de ambientes"
+              caption="Automação de iluminação de ambientes"
+            ></industry-service-card>
+
+            <industry-service-card
+              image="/assets/images/customers/industry/industry-05.png"
+              alt="Câmeras térmicas e noturnas"
+              caption="Câmeras térmicas e noturnas"
+            ></industry-service-card>
+
+            <industry-service-card
+              image="/assets/images/customers/industry/industry-06.png"
+              alt="Mapas de calor e contagem de pessoas"
+              caption="Mapas de calor e contagem de pessoas"
+            ></industry-service-card>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact invitation -->
+      <section class="industry-cta">
+        <a href="/pages/contact.html" class="industry-cta__button btn btn--primary">Solicitar orçamento</a>
+      </section>
     </main>
 
     <site-footer></site-footer>

@@ -1,0 +1,160 @@
+/* ==========================================================================
+   Customer Card
+   Repeated customer type card used on the customers page.
+   ========================================================================== */
+customer-card {
+  display: flex;
+  min-width: 0;
+}
+
+.customer-card {
+  width: 100%;
+  position: relative;
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 42px 44px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 420px;
+  box-shadow: 0 0 11.5px 3px rgba(0, 0, 0, 0.1);
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+/* Match the lift and shadow used by the contact cards. */
+.customer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.customer-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .customer-card {
+    transition: box-shadow var(--transition-fast);
+  }
+
+  .customer-card:hover,
+  .customer-card:focus-within {
+    transform: none;
+  }
+}
+
+.customer-card__header {
+  /* Keep the category icon and product link on the same row. */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.customer-card__icon {
+  width: 71px;
+  height: 70px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #2db884 0%, #1be398 100%);
+  border-radius: 11px;
+  padding: 10px;
+}
+
+.customer-card__icon-image {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.customer-card__button {
+  width: 164px;
+  height: 41px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(85.95deg, #23c3f3 -41.64%, #05517e 113.68%);
+  box-shadow: 0 0 5.9px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  color: #ffffff;
+  font-family: var(--font-family-primary);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.customer-card__title {
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+  color: #000000;
+  margin: 0;
+}
+
+.customer-card__text {
+  font-family: var(--font-family-primary);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  margin: 0;
+  min-height: 66px;
+}
+
+.customer-card__subtitle {
+  font-family: var(--font-family-primary);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #031c3b;
+  margin: 10px 0 0;
+}
+
+.customer-card__tags {
+  /* Tags wrap without changing the card's content order. */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.customer-card__tag {
+  height: 37px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #edf2f8;
+  border-radius: 50px;
+  color: #000000;
+  font-family: var(--font-family-primary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.customer-card__list {
+  /* Preserve the benefit list as native list content. */
+  margin: 8px 0 0;
+  padding-left: 14px;
+  font-family: var(--font-family-primary);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: #000000;
+}
+
+.customer-card__list li {
+  margin-bottom: 2px;
+}
+
+.customer-card__list li::marker {
+  color: #000000;
+}

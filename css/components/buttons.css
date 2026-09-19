@@ -33,6 +33,11 @@
   transform: translateY(0) scale(0.98);
 }
 
+.btn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
 /* ==========================================================================
    Color Variants
    ========================================================================== */
@@ -115,4 +120,24 @@
 
 .btn:hover .btn__icon {
   transform: translate(3px, -3px) scale(1.1);
+}
+
+/* Preserve color and shadow feedback without movement. */
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition:
+      box-shadow var(--transition-fast),
+      background-color var(--transition-fast),
+      filter var(--transition-fast);
+  }
+
+  .btn__icon {
+    transition: none;
+  }
+
+  .btn:hover,
+  .btn:active,
+  .btn:hover .btn__icon {
+    transform: none;
+  }
 }

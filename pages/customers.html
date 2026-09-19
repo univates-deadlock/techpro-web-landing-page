@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechPro - Clientes</title>
+    <title>TechPro | Clientes</title>
     <link rel="stylesheet" href="/css/global.css" />
     <link
       rel="icon"
@@ -12,11 +12,226 @@
     />
     <script type="module" src="/js/main.js"></script>
   </head>
-  <body>
+  <body class="page-customers">
     <site-header></site-header>
 
-    <main class="container">
-      <h1>Clientes</h1>
+    <main class="site-content">
+      <!-- Customers hero -->
+      <audience-hero
+        class="audience-hero audience-hero--customers"
+        eyebrow="ATENDIMENTO PERSONALIZADO"
+        heading="Clientes específicos, soluções sob medida"
+      >
+        Cada cliente tem necessidades únicas. Por isso projetamos soluções específicas para cada tipo de público e ambiente.
+      </audience-hero>
+
+      <!-- Customer types -->
+      <section class="customer-types">
+        <div class="customers-container">
+          <div class="customer-types__grid">
+            <customer-card
+              heading="Residências"
+              description="Projetos personalizados para casas e apartamentos, com integração à automação residencial."
+              icon="/assets/icons/white-house.svg"
+              product-href="/pages/not_implemented.html"
+            >
+              <span>Câmeras</span>
+              <span>Alarmes</span>
+              <span>Automação</span>
+              <ul>
+                <li>Tranquilidade para a família</li>
+                <li>Acesso remoto pelo celular</li>
+                <li>Sistemas discretos e elegantes</li>
+              </ul>
+            </customer-card>
+
+            <customer-card
+              heading="Indústria"
+              description="Equipamentos de alta resistência para ambientes industriais críticos."
+              icon="/assets/icons/white-industry.svg"
+              product-href="/pages/industry.html"
+            >
+              <span>Câmeras PTZ</span>
+              <span>Perímetro com IA</span>
+              <span>Manutenção</span>
+              <ul>
+                <li>Cobertura de grandes áreas</li>
+                <li>Monitoramento de perímetros</li>
+                <li>Detecção inteligente de invasões</li>
+              </ul>
+            </customer-card>
+
+            <customer-card
+              heading="Empresas e Escritórios"
+              description="Integração com sistemas corporativos e proteção de dados sensíveis."
+              icon="/assets/icons/white-company.svg"
+              product-href="/pages/not_implemented.html"
+            >
+              <span>Controle de acesso</span>
+              <span>Câmeras IP</span>
+              <span>Automações com IA</span>
+              <ul>
+                <li>Controle de horários e setores</li>
+                <li>Reconhecimento facial</li>
+                <li>Relatórios automáticos</li>
+              </ul>
+            </customer-card>
+
+            <customer-card
+              heading="Instituições"
+              description="Soluções de segurança para escolas, universidades, hospitais e órgãos públicos, com foco em controle, monitoramento e proteção de pessoas."
+              icon="/assets/icons/white-institution.svg"
+              product-href="/pages/not_implemented.html"
+            >
+              <span>Controle de acesso</span>
+              <span>Monitoramento IP</span>
+              <span>Alarmes inteligentes</span>
+              <ul>
+                <li>Controle seguro de entrada e saída de pessoas</li>
+                <li>Monitoramento contínuo de áreas sensíveis</li>
+                <li>Resposta rápida a situações de emergência</li>
+              </ul>
+            </customer-card>
+
+            <customer-card
+              heading="Transportadoras"
+              description="Proteção de cargas, veículos e centros logísticos com monitoramento em tempo real e gestão integrada de segurança."
+              icon="/assets/icons/white-truck.svg"
+              product-href="/pages/not_implemented.html"
+            >
+              <span>Rastreamento</span>
+              <span>Câmeras veiculares</span>
+              <span>Controle perimetral</span>
+              <ul>
+                <li>Acompanhamento da frota em tempo real</li>
+                <li>Maior segurança para motoristas e mercadorias</li>
+                <li>Redução de perdas e ocorrências operacionais</li>
+              </ul>
+            </customer-card>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product applications -->
+      <section class="applications">
+        <div class="customers-container">
+          <span class="applications__eyebrow">APLICAÇÕES</span>
+          <h2 class="applications__title">Cada produto, cada cliente</h2>
+          <p class="applications__description">Veja como cada solução se adapta ao seu perfil.</p>
+
+          <div class="applications__table-wrapper">
+            <table class="applications-table">
+              <thead>
+                <tr>
+                  <th scope="col" class="applications-table__first">Produtos/Clientes</th>
+                  <th scope="col">Residência</th>
+                  <th scope="col">Condomínio</th>
+                  <th scope="col">Comércio</th>
+                  <th scope="col">Indústria</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class="applications-table__row-title">Câmeras</th>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="applications-table__row-title">Alarmes</th>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="applications-table__row-title">Controle de Acesso</th>
+                  <td><span class="applications-table__status applications-table__status--unavailable" role="img" aria-label="Indisponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="applications-table__row-title">Automações com IA</th>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--unavailable" role="img" aria-label="Indisponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row" class="applications-table__row-title">Manutenção</th>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                  <td><span class="applications-table__status applications-table__status--available" role="img" aria-label="Disponível"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured services -->
+      <section class="featured-services">
+        <div class="customers-container">
+          <h2 class="featured-services__title">Serviços em destaque</h2>
+
+          <div class="featured-services__grid">
+            <featured-service-card
+              image="/assets/images/customers/service-01.png"
+              alt="Instalação de câmera externa em residência"
+              caption="Instalação de câmera externa em residência"
+            ></featured-service-card>
+
+            <featured-service-card
+              image="/assets/images/customers/service-02.png"
+              alt="Controle de acesso em condomínio residencial"
+              caption="Controle de acesso em condomínio residencial"
+            ></featured-service-card>
+
+            <featured-service-card
+              image="/assets/images/customers/service-03.png"
+              alt="Central de monitoramento corporativa"
+              caption="Central de monitoramento corporativa"
+            ></featured-service-card>
+
+            <featured-service-card
+              image="/assets/images/customers/service-04.png"
+              alt="Sistema de alarme em comércio"
+              caption="Sistema de alarme em comércio"
+            ></featured-service-card>
+
+            <featured-service-card
+              image="/assets/images/customers/service-05.png"
+              alt="Câmeras de perímetro em indústria"
+              caption="Câmeras de perímetro em indústria"
+            ></featured-service-card>
+
+            <featured-service-card
+              image="/assets/images/customers/service-06.png"
+              alt="Segurança integrada para residência de alto padrão"
+              caption="Segurança integrada para residência de alto padrão"
+            ></featured-service-card>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact invitation -->
+      <section class="customers-cta">
+        <div class="customers-container">
+          <div class="customers-cta__content">
+            <h2 class="customers-cta__title">Pronto para proteger o que mais importa?</h2>
+            <p class="customers-cta__text">
+              Solicite um orçamento gratuito e personalizado. Nossa equipe responde em até 1 hora útil.
+            </p>
+            <a class="customers-cta__button btn btn--primary" href="/pages/contact.html">FAÇA SEU ORÇAMENTO</a>
+          </div>
+          <div class="customers-cta__image">
+            <img src="/assets/images/home/mascot.png" alt="Robô TechPro" />
+          </div>
+        </div>
+      </section>
     </main>
 
     <site-footer></site-footer>

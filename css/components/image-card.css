@@ -1,0 +1,156 @@
+/* ==========================================================================
+   Image Card
+   Shared image and caption markup for both page service grids.
+   ========================================================================== */
+
+/* Base card structure */
+featured-service-card,
+industry-service-card {
+  display: block;
+}
+
+featured-service-card {
+  display: flex;
+  min-width: 0;
+}
+
+industry-service-card {
+  height: 100%;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 26px;
+  background: var(--color-background);
+  box-shadow: 0 0 11.5px 3px rgba(0, 0, 0, 0.1);
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.image-card__image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 26px 26px 0 0;
+}
+
+.image-card__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+/* Match the contact cards' lift and add a small image zoom. */
+.image-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.image-card:hover .image-card__image img {
+  transform: scale(1.035);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-card {
+    transition: box-shadow var(--transition-fast);
+  }
+
+  .image-card__image img {
+    transition: none;
+  }
+
+  .image-card:hover,
+  .image-card:hover .image-card__image img {
+    transform: none;
+  }
+}
+
+.image-card__caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 75px;
+  margin: 0;
+  border-radius: 0 0 26px 26px;
+  background: var(--color-background);
+  font-family: var(--font-family-primary);
+  text-align: center;
+}
+
+/* Customers page: fixed-height service photos and lighter captions */
+.image-card--featured {
+  width: 519px;
+  height: 100%;
+  background: var(--color-neutral-300);
+}
+
+.image-card--featured .image-card__image {
+  height: 396px;
+  flex-grow: 1;
+  background: var(--color-background);
+}
+
+.image-card--featured .image-card__caption {
+  padding: 26px 20px;
+  color: #000000;
+  font-size: 20px;
+  font-weight: var(--font-weight-light);
+  line-height: 24px;
+}
+
+/* Industry page: equal-height cards with image-specific proportions */
+.image-card--industry {
+  height: 100%;
+}
+
+.image-card--industry .image-card__image {
+  flex: 1;
+  min-height: 0;
+}
+
+.image-card--industry .image-card__image img {
+  aspect-ratio: 519 / 392;
+}
+
+.image-card--plate-reading .image-card__image img {
+  aspect-ratio: 519 / 336;
+}
+
+.image-card--perimeter-camera .image-card__image img {
+  aspect-ratio: 519 / 409;
+}
+
+.image-card--monitoring .image-card__image img {
+  aspect-ratio: 519 / 410;
+}
+
+.image-card--perimeter-camera {
+  box-shadow: 0 0 11.5px 3px rgba(0, 0, 0, 0.25);
+}
+
+.image-card--industry .image-card__caption {
+  width: 100%;
+  padding: 16px 24px;
+  color: var(--color-background-hero);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+}
+
+/* Keep featured cards inside narrower grid tracks. */
+@media (max-width: 1700px) {
+  .image-card--featured {
+    width: 100%;
+  }
+
+  .image-card--featured .image-card__image {
+    height: auto;
+    aspect-ratio: 519 / 396;
+  }
+}
