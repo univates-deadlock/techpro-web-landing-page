@@ -20,7 +20,7 @@
     <main class="site-content">
 
     <!-- ====================================================================
-                                 1) Hero Section
+    Hero Section
     ========================================================================= -->
     <section class="hero-institutional">
       <div class="container">
@@ -34,7 +34,7 @@
     </section>
 
     <!-- ====================================================================
-                                  2) About Us Section
+    About Us Section
     ========================================================================= -->
     <section class="about-institutional">
       <div class="container">
@@ -52,62 +52,43 @@
     </section>
 
     <!-- ====================================================================
-                                  3) Statistics Section
+    Statistics Section
     ========================================================================= -->
     <section class="stats-institutional">
       <div class="container">
         <div class="stats-institutional__grid">
 
-          <!-- card 1 -->
-          <article class="stats-institutional__item">
-            <img
-              src="/assets/icons/green-clock.svg"
-              alt="Ícone de relógio verde"
-              class="stats-institutional__icon"
-            />
-            <strong class="stats-institutional__number">+02</strong>
-            <span class="stats-institutional__label">Anos no mercado</span>
-          </article>
-
-          <!-- card 2 -->
-          <article class="stats-institutional__item">
-            <img
-              src="/assets/icons/green-users.svg"
-              alt="Ícone de usuários verdes"
-              class="stats-institutional__icon"
-            />
-            <strong class="stats-institutional__number">+300</strong>
-            <span class="stats-institutional__label">Clientes atendidos</span>
-          </article>
-
-          <!-- card 3 -->
-          <article class="stats-institutional__item">
-            <img
-              src="/assets/icons/green-shield.svg"
-              alt="Ícone de escudo verde"
-              class="stats-institutional__icon"
-            />
-            <strong class="stats-institutional__number">+1.000</strong>
-            <span class="stats-institutional__label">Equipamentos instalados</span>
-          </article>
-
-          <!-- card 4 -->
-          <article class="stats-institutional__item">
-            <img
-              src="/assets/icons/green-medal.svg"
-              alt="Ícone de medalha verde"
-              class="stats-institutional__icon"
-            />
-            <strong class="stats-institutional__number">97%</strong>
-            <span class="stats-institutional__label">Satisfação dos clientes</span>
-          </article>
+          <institutional-stat-card
+            icon="/assets/icons/green-clock.svg"
+            icon-alt="Ícone de relógio verde"
+            value="+02"
+            label="Anos no mercado"
+          ></institutional-stat-card>
+          <institutional-stat-card
+            icon="/assets/icons/green-users.svg"
+            icon-alt="Ícone de usuários verdes"
+            value="+300"
+            label="Clientes atendidos"
+          ></institutional-stat-card>
+          <institutional-stat-card
+            icon="/assets/icons/green-shield.svg"
+            icon-alt="Ícone de escudo verde"
+            value="+1.000"
+            label="Equipamentos instalados"
+          ></institutional-stat-card>
+          <institutional-stat-card
+            icon="/assets/icons/green-medal.svg"
+            icon-alt="Ícone de medalha verde"
+            value="97%"
+            label="Satisfação dos clientes"
+          ></institutional-stat-card>
 
         </div>
       </div>
     </section>
 
     <!-- ====================================================================
-                                  4) Purpose Section
+    Purpose Section
     ========================================================================= -->    
     <section class="purpose-institutional"> 
       <div class="container"> 
@@ -115,39 +96,31 @@
 
         <div class="purpose-institutional__grid">
           
-          <!-- column 1: mission -->
-          <div class="purpose-institutional__column">
-            <h3 class="purpose-institutional__title">Missão</h3>
-            <article class="purpose-institutional__card">
-              <p class="purpose-institutional__text"> 
-                Proporcionar tranquilidade para famílias, empresas e pessoas que depositam sua confiança em nosso trabalho, através de soluções preventivas e tecnológicas.</p>
-            </article>
-           </div>
-
-           <!-- column 2: vision -->
-          <div class="purpose-institutional__column">
-            <h3 class="purpose-institutional__title">Visão</h3>
-            <article class="purpose-institutional__card">
-              <p class="purpose-institutional__text"> 
-                Ser reconhecida como referência no setor, oferecendo soluções inovadoras e de alta qualidade, garantindo a satisfação de nossos clientes e o desenvolvimento sustentável de nossa equipe.</p>
-            </article>
-          </div>
-
-           <!-- column 3: values -->
-          <div class="purpose-institutional__column">
-            <h3 class="purpose-institutional__title">Valores</h3>
-            <article class="purpose-institutional__card">
-              <p class="purpose-institutional__text"> 
-                Nosso compromisso está baseado em três pilares, confiança, qualidade e proximidade</p>
-            </article>
-          </div>
+          <institutional-purpose-card
+            class="purpose-institutional__column"
+            heading="Missão"
+          >
+            Proporcionar tranquilidade para famílias, empresas e pessoas que depositam sua confiança em nosso trabalho, através de soluções preventivas e tecnológicas.
+          </institutional-purpose-card>
+          <institutional-purpose-card
+            class="purpose-institutional__column"
+            heading="Visão"
+          >
+            Ser reconhecida como referência no setor, oferecendo soluções inovadoras e de alta qualidade, garantindo a satisfação de nossos clientes e o desenvolvimento sustentável de nossa equipe.
+          </institutional-purpose-card>
+          <institutional-purpose-card
+            class="purpose-institutional__column"
+            heading="Valores"
+          >
+            Nosso compromisso está baseado em três pilares, confiança, qualidade e proximidade
+          </institutional-purpose-card>
 
         </div>
       </div>
     </section>
 
     <!-- ====================================================================
-                                  5) Quote
+    Quote
     ========================================================================= -->    
     <section class="quote-institutional">
       <div class="container">
@@ -180,7 +153,7 @@
     </section>
 
     <!-- ====================================================================
-                                  6) call to action
+    Call to action
     ========================================================================= -->  
 
     <section class="cta-institutional">
