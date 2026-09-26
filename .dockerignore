@@ -1,0 +1,11 @@
+*
+!Dockerfile
+!index.html
+!pages/
+!pages/**
+!css/
+!css/**
+!js/
+!js/**
+!assets/
+!assets/**
