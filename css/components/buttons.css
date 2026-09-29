@@ -74,6 +74,23 @@
   box-shadow: 0 2px 8px color-mix(in srgb, var(--color-button-footer) 25%, transparent);
 }
 
+/* Outline Button (Transparent with White Border) */
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-emphasis-text);
+  border: 1.5px solid var(--color-emphasis-text);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.btn--outline:hover {
+  background-color: color-mix(in srgb, var(--color-emphasis-text) 12%, transparent);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn--outline:active {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
 /* Dark / Tertiary Button (Neutral Dark / WhatsApp CTA) */
 .btn--dark,
 .btn--tertiary {
