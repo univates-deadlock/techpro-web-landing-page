@@ -5,7 +5,7 @@
 /* ==========================================================================
    Hero Section
    ========================================================================== */
-.hero {
+body.home-page .hero {
     position: relative;
     padding: 64px 0;
     background: url("/assets/images/home/hero.jpg") no-repeat center center;
@@ -16,7 +16,7 @@
     overflow: hidden;
 }
 
-.hero::before {
+body.home-page .hero::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -24,7 +24,7 @@
     z-index: 1;
 }
 
-.hero>.home-container {
+body.home-page .hero>.home-container {
     position: relative;
     z-index: 2;
     width: 100%;
@@ -32,7 +32,7 @@
     box-sizing: border-box;
 }
 
-.hero__content {
+body.home-page .hero__content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -40,7 +40,7 @@
     max-width: 888px;
 }
 
-.hero__eyebrow {
+body.home-page .hero__eyebrow {
     display: block;
     font-family: var(--font-family-primary);
     font-weight: 400;
@@ -52,7 +52,7 @@
     margin: 0;
 }
 
-.hero__title {
+body.home-page .hero__title {
     font-family: var(--font-family-primary);
     font-weight: 600;
     font-size: 64px;
@@ -61,11 +61,11 @@
     margin: 0;
 }
 
-.hero__highlight {
+body.home-page .hero__highlight {
     color: var(--color-primary);
 }
 
-.hero__message {
+body.home-page .hero__message {
     font-family: var(--font-family-primary);
     font-weight: 300;
     font-size: 24px;
@@ -75,7 +75,7 @@
     max-width: 700px;
 }
 
-.hero__actions {
+body.home-page .hero__actions {
     display: flex;
     gap: 16px;
     margin-top: 8px;
@@ -101,7 +101,7 @@
     max-width: 700px;
 }
 
-.audience__eyebrow {
+body.home-page .audience__eyebrow {
     display: block;
     font-family: var(--font-family-primary);
     font-weight: 400;
@@ -109,7 +109,7 @@
     line-height: 28px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #2db884;
+    color: var(--color-green-700);
     margin: 0 0 16px;
 }
 
@@ -127,7 +127,7 @@
     font-weight: 300;
     font-size: 24px;
     line-height: 28px;
-    color: #b0b0b0;
+    color: var(--color-text-body);
     margin: 0;
 }
 
@@ -190,24 +190,24 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
-    color: #b0b0b0;
+    color: var(--color-text-body);
     margin: 0;
 }
 
 /* ==========================================================================
    Nossos Serviços
    ========================================================================== */
-.services {
+body.home-page .services {
     padding: 80px 100px 100px;
     background-color: #edf2f8;
 }
 
-.services__header {
+body.home-page .services__header {
     margin: 0 0 48px;
     max-width: 620px;
 }
 
-.services__eyebrow {
+body.home-page .services__eyebrow {
     display: block;
     font-family: var(--font-family-primary);
     font-weight: 400;
@@ -215,11 +215,11 @@
     line-height: 28px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #2db884;
+    color: var(--color-green-700);
     margin: 0 0 16px;
 }
 
-.services__title {
+body.home-page .services__title {
     font-family: var(--font-family-primary);
     font-weight: 600;
     font-size: 64px;
@@ -228,7 +228,7 @@
     margin: 0;
 }
 
-.services__grid {
+body.home-page .services__grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-auto-rows: 1fr;
@@ -236,7 +236,7 @@
     width: 100%;
 }
 
-.services__card {
+body.home-page .services__card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -249,12 +249,12 @@
         box-shadow var(--transition-normal);
 }
 
-.services__card:hover {
+body.home-page .services__card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
-.services__icon-wrapper {
+body.home-page .services__icon-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -266,13 +266,13 @@
     border-radius: 8px;
 }
 
-.services__icon {
+body.home-page .services__icon {
     width: 20px;
     height: 20px;
     object-fit: contain;
 }
 
-.services__card-title {
+body.home-page .services__card-title {
     font-family: var(--font-family-primary);
     font-weight: 600;
     font-size: 18px;
@@ -281,20 +281,20 @@
     margin: 0 0 8px;
 }
 
-.services__card-text {
+body.home-page .services__card-text {
     font-family: var(--font-family-primary);
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
-    color: #b0b0b0;
+    color: var(--color-text-body);
     margin: 0 0 14px;
 }
 
-.services__link {
+body.home-page .services__link {
     font-family: var(--font-family-primary);
     font-weight: 700;
     font-size: 14px;
-    color: var(--color-primary);
+    color: var(--color-green-700);
     margin-top: auto;
 }
 
@@ -313,7 +313,7 @@
     gap: 40px;
 }
 
-.differentials__eyebrow {
+body.home-page .differentials__eyebrow {
     display: block;
     font-family: var(--font-family-primary);
     font-weight: 400;
@@ -321,7 +321,7 @@
     line-height: 28px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #2db884;
+    color: var(--color-green-700);
     margin: 0 0 16px;
 }
 
@@ -423,16 +423,11 @@
 
 .cta__image {
     align-self: flex-end;
+    display: block;
     width: 220px;
     height: auto;
     margin-bottom: -40px;
-}
-
-.cta__image img {
-    width: 100%;
-    height: 100%;
     object-fit: contain;
-    display: block;
 }
 
 /* ==========================================================================
@@ -441,16 +436,16 @@
 @media (max-width: 1700px) {
 
     .audience__grid,
-    .services__grid {
+    body.home-page .services__grid {
         justify-content: center;
     }
 }
 
 @media (max-width: 1280px) {
 
-    .hero>.home-container,
+    body.home-page .hero>.home-container,
     .audience>.home-container,
-    .services,
+    body.home-page .services,
     .differentials,
     .cta>.home-container {
         padding-left: 60px;
@@ -461,7 +456,7 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .services__grid {
+    body.home-page .services__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 24px;
     }
@@ -486,43 +481,43 @@
 
 @media (max-width: 890px) {
 
-    .hero,
+    body.home-page .hero,
     .audience,
-    .services,
+    body.home-page .services,
     .differentials {
         padding-top: 60px;
         padding-bottom: 80px;
     }
 
-    .hero__title,
+    body.home-page .hero__title,
     .audience__title,
-    .services__title,
+    body.home-page .services__title,
     .differentials__title,
     .cta__title {
         font-size: 42px;
     }
 
     .audience__grid,
-    .services__grid,
+    body.home-page .services__grid,
     .differentials__grid {
         grid-template-columns: 1fr;
     }
 
-    .hero__actions {
+    body.home-page .hero__actions {
         flex-direction: column;
         width: 100%;
     }
 
-    .hero__actions .btn {
+    body.home-page .hero__actions .btn {
         width: 100%;
     }
 }
 
 @media (max-width: 680px) {
 
-    .hero>.home-container,
+    body.home-page .hero>.home-container,
     .audience>.home-container,
-    .services,
+    body.home-page .services,
     .differentials,
     .cta>.home-container {
         padding-left: 20px;
@@ -532,9 +527,9 @@
 
 @media (max-width: 480px) {
 
-    .hero,
+    body.home-page .hero,
     .audience,
-    .services,
+    body.home-page .services,
     .differentials {
         padding-top: 40px;
         padding-bottom: 60px;
