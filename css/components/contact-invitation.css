@@ -1,0 +1,138 @@
+/* ==========================================================================
+   Contact Invitation Component
+   ========================================================================== */
+
+contact-invitation,
+site-cta {
+  display: block;
+}
+
+.contact-invitation {
+  position: relative;
+  padding: 64px 0 0;
+  background: linear-gradient(
+    270deg,
+    var(--color-blue-900, #00325f) 0%,
+    var(--color-navy-900, #0e1930) 89.42%
+  );
+  overflow: hidden;
+  min-height: 451px;
+}
+
+.contact-invitation__container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 40px;
+  padding: 0 141px;
+  box-sizing: border-box;
+}
+
+.contact-invitation__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding-bottom: 80px;
+  max-width: 1084px;
+}
+
+.contact-invitation__title {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-semibold, 600);
+  font-size: 75px;
+  line-height: 109.74%;
+  color: var(--color-neutral-white, #ffffff);
+  margin: 0;
+}
+
+.contact-invitation__text {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-light, 300);
+  font-size: 24px;
+  line-height: 28px;
+  color: #dedede;
+  margin: 0;
+  max-width: 888px;
+}
+
+.contact-invitation__button {
+  height: 56px;
+  padding: 0 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    var(--color-primary, #2db884) 0%,
+    var(--color-primary-light, #1be398) 100%
+  );
+  border-radius: 11px;
+  color: var(--color-neutral-white, #ffffff);
+  font-family: var(--font-family-primary);
+  font-size: 20px;
+  font-weight: var(--font-weight-bold, 700);
+  text-decoration: none;
+  transition: transform var(--transition-fast, 150ms ease), filter var(--transition-fast, 150ms ease);
+}
+
+.contact-invitation__button:hover {
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+}
+
+.contact-invitation__image {
+  /* Extend the mascot slightly below the section edge. */
+  align-self: flex-end;
+  width: 466px;
+  height: 491px;
+  margin-bottom: -40px;
+}
+
+.contact-invitation__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ==========================================================================
+   Responsive Layout
+   ========================================================================== */
+@media (max-width: 1280px) {
+  .contact-invitation__container {
+    padding: 0 60px;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-invitation__content {
+    align-items: center;
+  }
+
+  .contact-invitation__image {
+    display: none;
+  }
+}
+
+@media (max-width: 890px) {
+  .contact-invitation__title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 680px) {
+  .contact-invitation__container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-invitation {
+    padding-top: 50px;
+  }
+
+  .contact-invitation__content {
+    padding-bottom: 40px;
+  }
+}

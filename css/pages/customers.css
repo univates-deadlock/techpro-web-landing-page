@@ -212,7 +212,8 @@
   font-size: 64px;
   line-height: 109.74%;
   color: #000000;
-  margin: 0 0 48px;
+  margin: 0 auto 48px;
+  max-width: 1624px;
 }
 
 .featured-services__grid {
@@ -223,88 +224,10 @@
   row-gap: 14px;
   width: 100%;
   max-width: 1624px;
-}
-
-/* ==========================================================================
-   Contact Invitation
-   ========================================================================== */
-.customers-cta {
-  position: relative;
-  padding: 64px 0 0;
-  background: linear-gradient(
-    270deg,
-    #00325f 0%,
-    #0e1930 89.42%
-  );
-  overflow: hidden;
-  min-height: 451px;
-}
-
-.customers-cta > .customers-container {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 40px;
-  padding: 0 141px;
-  box-sizing: border-box;
-}
-
-.customers-cta__content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-  padding-bottom: 80px;
-  max-width: 1084px;
-}
-
-.customers-cta__title {
-  font-family: var(--font-family-primary);
-  font-weight: 600;
-  font-size: 75px;
-  line-height: 109.74%;
-  color: #ffffff;
-  margin: 0;
-}
-
-.customers-cta__text {
-  font-family: var(--font-family-primary);
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 28px;
-  color: #dedede;
-  margin: 0;
-  max-width: 888px;
-}
-
-.customers-cta__button {
-  height: 56px;
-  padding: 0 32px;
-  display: inline-flex;
-  align-items: center;
+  margin: 0 auto;
   justify-content: center;
-  background: linear-gradient(180deg, #2db884 0%, #1be398 100%);
-  border-radius: 11px;
-  color: #ffffff;
-  font-family: var(--font-family-primary);
-  font-size: 20px;
-  font-weight: 700;
 }
 
-.customers-cta__image {
-  /* Extend the mascot slightly below the section edge. */
-  align-self: flex-end;
-  width: 466px;
-  height: 491px;
-  margin-bottom: -40px;
-}
-
-.customers-cta__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
 
 /* ==========================================================================
    Responsive Layout
@@ -319,8 +242,7 @@
 @media (max-width: 1280px) {
   /* Switch both card grids to two columns. */
   .customer-types > .customers-container,
-  .featured-services > .customers-container,
-  .customers-cta > .customers-container {
+  .featured-services > .customers-container {
     padding: 0 60px;
   }
 
@@ -338,19 +260,6 @@
   .applications__table-wrapper {
     margin: 0;
   }
-
-  .customers-cta > .customers-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .customers-cta__content {
-    align-items: center;
-  }
-
-  .customers-cta__image {
-    display: none;
-  }
 }
 
 @media (max-width: 890px) {
@@ -367,8 +276,7 @@
   }
 
   .applications__title,
-  .featured-services__title,
-  .customers-cta__title {
+  .featured-services__title {
     font-size: 42px;
   }
 
@@ -397,8 +305,7 @@
   }
 
   .customer-types > .customers-container,
-  .featured-services > .customers-container,
-  .customers-cta > .customers-container {
+  .featured-services > .customers-container {
     padding: 0 20px;
   }
 
@@ -422,13 +329,5 @@
   .applications,
   .featured-services {
     padding: 40px 0 60px;
-  }
-
-  .customers-cta {
-    padding-top: 50px;
-  }
-
-  .customers-cta__content {
-    padding-bottom: 40px;
   }
 }

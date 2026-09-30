@@ -373,62 +373,6 @@ body.home-page .differentials__eyebrow {
     color: #000000;
 }
 
-/* ==========================================================================
-   CTA Final
-   ========================================================================== */
-.cta {
-    position: relative;
-    padding: 64px 0 0;
-    background: linear-gradient(270deg, #00325f 0%, #0e1930 89.42%);
-    overflow: hidden;
-    min-height: 451px;
-}
-
-.cta>.home-container {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 40px;
-    padding: 0 141px;
-    box-sizing: border-box;
-}
-
-.cta__content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    padding-bottom: 80px;
-    max-width: 888px;
-}
-
-.cta__title {
-    font-family: var(--font-family-primary);
-    font-weight: 600;
-    font-size: 64px;
-    line-height: 109.74%;
-    color: #ffffff;
-    margin: 0;
-}
-
-.cta__message {
-    font-family: var(--font-family-primary);
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 28px;
-    color: #dedede;
-    margin: 0;
-    max-width: 700px;
-}
-
-.cta__image {
-    align-self: flex-end;
-    display: block;
-    width: 220px;
-    height: auto;
-    margin-bottom: -40px;
-    object-fit: contain;
-}
 
 /* ==========================================================================
    Responsive Layout
@@ -446,8 +390,7 @@ body.home-page .differentials__eyebrow {
     body.home-page .hero>.home-container,
     .audience>.home-container,
     body.home-page .services,
-    .differentials,
-    .cta>.home-container {
+    .differentials {
         padding-left: 60px;
         padding-right: 60px;
     }
@@ -464,19 +407,6 @@ body.home-page .differentials__eyebrow {
     .differentials__container {
         grid-template-columns: 1fr;
     }
-
-    .cta>.home-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .cta__content {
-        align-items: center;
-    }
-
-    .cta__image {
-        display: none;
-    }
 }
 
 @media (max-width: 890px) {
@@ -492,8 +422,7 @@ body.home-page .differentials__eyebrow {
     body.home-page .hero__title,
     .audience__title,
     body.home-page .services__title,
-    .differentials__title,
-    .cta__title {
+    .differentials__title {
         font-size: 42px;
     }
 
@@ -518,8 +447,7 @@ body.home-page .differentials__eyebrow {
     body.home-page .hero>.home-container,
     .audience>.home-container,
     body.home-page .services,
-    .differentials,
-    .cta>.home-container {
+    .differentials {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -533,13 +461,5 @@ body.home-page .differentials__eyebrow {
     .differentials {
         padding-top: 40px;
         padding-bottom: 60px;
-    }
-
-    .cta {
-        padding-top: 50px;
-    }
-
-    .cta__content {
-        padding-bottom: 40px;
     }
 }
