@@ -9,6 +9,7 @@
 @import "components/audience-hero.css";
 @import "components/image-card.css";
 @import "components/customer-card.css";
+@import "components/contact-invitation.css";
 
 /* Pages */
 @import "pages/home.css";
